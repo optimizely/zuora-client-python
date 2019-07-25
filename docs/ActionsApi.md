@@ -1,4 +1,4 @@
-# swagger_client.ActionsApi
+# zuora_client.ActionsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -25,13 +25,13 @@ Modifies a subscription by creating Amendment objects.  The availability of this
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActionamendRequest() # ProxyActionamendRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActionamendRequest() # ProxyActionamendRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -79,13 +79,13 @@ Use the create call to create one or more objects of a specific type. You can sp
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActioncreateRequest() # ProxyActioncreateRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActioncreateRequest() # ProxyActioncreateRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -133,13 +133,13 @@ Deletes one or more objects of the same type. You can specify different types in
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActiondeleteRequest() # ProxyActiondeleteRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActiondeleteRequest() # ProxyActiondeleteRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -187,13 +187,13 @@ Use the execute call to execute a process to split an invoice into multiple invo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActionexecuteRequest() # ProxyActionexecuteRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActionexecuteRequest() # ProxyActionexecuteRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -241,13 +241,13 @@ Generates an on-demand invoice for a specific customer. This is similar to creat
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActiongenerateRequest() # ProxyActiongenerateRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActiongenerateRequest() # ProxyActiongenerateRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -295,13 +295,13 @@ The query call sends a query expression by specifying the object to query, the f
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActionqueryRequest() # ProxyActionqueryRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActionqueryRequest() # ProxyActionqueryRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -349,13 +349,13 @@ Use queryMore to request additional results from a previous query call. If your 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActionqueryMoreRequest() # ProxyActionqueryMoreRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActionqueryMoreRequest() # ProxyActionqueryMoreRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -403,13 +403,13 @@ Subscribe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActionsubscribeRequest() # ProxyActionsubscribeRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActionsubscribeRequest() # ProxyActionsubscribeRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)
@@ -457,13 +457,13 @@ Update
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ActionsApi()
-body = swagger_client.ProxyActionupdateRequest() # ProxyActionupdateRequest | 
+api_instance = zuora_client.ActionsApi()
+body = zuora_client.ProxyActionupdateRequest() # ProxyActionupdateRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 x_zuora_wsdl_version = 'x_zuora_wsdl_version_example' # str | Zuora WSDL version number.  (optional)

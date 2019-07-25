@@ -1,4 +1,4 @@
-# swagger_client.DebitMemosApi
+# zuora_client.DebitMemosApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -33,12 +33,12 @@ Delete debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -83,12 +83,12 @@ Get debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -133,12 +133,12 @@ Get debit memo application parts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -183,12 +183,12 @@ Get debit memo item
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 dmitemid = 'dmitemid_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -237,12 +237,12 @@ Get debit memo items
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
@@ -319,12 +319,12 @@ Get debit memos
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 account_id = 'account_id_example' # str | This parameter filters the response based on the `accountId` field.  (optional)
@@ -405,12 +405,12 @@ Get taxation items of debit memo item
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 dmitemid = 'dmitemid_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -461,13 +461,13 @@ Create debit memo from charge
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
-body = swagger_client.DebitMemoFromChargeType() # DebitMemoFromChargeType | 
+api_instance = zuora_client.DebitMemosApi()
+body = zuora_client.DebitMemoFromChargeType() # DebitMemoFromChargeType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str |  The minor version of the Zuora REST API. See [Minor Version](https://www.zuora.com/developer/api-reference/#section/API-Versions/Minor-Version) for information about REST API version control.   This header affects the availability of the following fields: * amount * memoItemAmount  (optional)
 
@@ -513,12 +513,12 @@ Create debit memo PDF
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of the debit memo that you want to create a PDF file for. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -563,13 +563,13 @@ Email debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
-body = swagger_client.PostDebitMemoEmailType() # PostDebitMemoEmailType | 
+api_instance = zuora_client.DebitMemosApi()
+body = zuora_client.PostDebitMemoEmailType() # PostDebitMemoEmailType | 
 debit_memo_id = 'debit_memo_id_example' # str | The ID of a posted debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -615,12 +615,12 @@ Upload file for debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The ID of the debit memo that you want to upload a PDF file for. For example, 402890555a87d7f5015a8919e4fe002e. 
 file = 'file_example' # file |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -669,13 +669,13 @@ Create taxation items for debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
-body = swagger_client.POSTTaxationItemListForDMType() # POSTTaxationItemListForDMType | 
+api_instance = zuora_client.DebitMemosApi()
+body = zuora_client.POSTTaxationItemListForDMType() # POSTTaxationItemListForDMType | 
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -721,13 +721,13 @@ Update debit memos
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
-body = swagger_client.PUTBatchDebitMemosRequest() # PUTBatchDebitMemosRequest | 
+api_instance = zuora_client.DebitMemosApi()
+body = zuora_client.PUTBatchDebitMemosRequest() # PUTBatchDebitMemosRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -771,12 +771,12 @@ Cancel debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -821,13 +821,13 @@ Update debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
-body = swagger_client.PUTDebitMemoType() # PUTDebitMemoType | 
+api_instance = zuora_client.DebitMemosApi()
+body = zuora_client.PUTDebitMemoType() # PUTDebitMemoType | 
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -873,12 +873,12 @@ Post debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -923,12 +923,12 @@ Unpost debit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DebitMemosApi()
+api_instance = zuora_client.DebitMemosApi()
 debit_memo_id = 'debit_memo_id_example' # str | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

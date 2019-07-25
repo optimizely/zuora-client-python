@@ -1,4 +1,4 @@
-# swagger_client.HostedPagesApi
+# zuora_client.HostedPagesApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -17,12 +17,12 @@ The hostedpages call returns the Payment Pages configuration metadata, specifica
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostedPagesApi()
+api_instance = zuora_client.HostedPagesApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 version_number = 'version_number_example' # str | Version of the Payment Pages for which you want to retrieve the configuration information. Specify 1 for Payment Pages 1.0 or 2 for Payment Pages 2.0. If omitted, information for all versions of Payment Pages are returned.  The response also depends on your tenant settings for Payment Pages 1.0 and Payment Pages 2.0. For example, if only the tenant setting for Payment Pages 2.0 is enabled, the response will only contain information for Payment Pages 2.0 forms even when this parameter is omitted.  (optional)

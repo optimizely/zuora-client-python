@@ -1,4 +1,4 @@
-# swagger_client.RevenueSchedulesApi
+# zuora_client.RevenueSchedulesApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -37,12 +37,12 @@ Deletes a revenue schedule by specifying its revenue schedule number ## Prerequi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 rs_number = 'rs_number_example' # str |  Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule: * Must be using a custom unlimited recognition rule. * Cannot have any revenue in a closed accounting period. * Cannot be included in a summary journal entry. * Cannot have a revenue schedule date in a closed accounting period. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -87,12 +87,12 @@ Get revenue schedule by credit memo item ID
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 cmi_id = 'cmi_id_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 try:
@@ -135,12 +135,12 @@ Get revenue schedule by debit memo item ID
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 dmi_id = 'dmi_id_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 try:
@@ -183,12 +183,12 @@ Retrieves the details of a revenue schedule by specifying the invoice item ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 invoice_item_id = 'invoice_item_id_example' # str | A valid Invoice Item ID.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -233,12 +233,12 @@ Retrieves the details of a revenue schedule by specifying a valid invoice item a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -283,12 +283,12 @@ Get all revenue schedules of product charge by charge ID and billing account ID
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 account_key = 'account_key_example' # str | The account number or account ID. 
 charge_key = 'charge_key_example' # str | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
 page_size = 56 # int | Number of rows returned per page.  (optional)
@@ -335,12 +335,12 @@ Retrieves the revenue schedule details by specifying subscription charge ID. Req
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 charge_key = 'charge_key_example' # str | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
@@ -387,12 +387,12 @@ Retrieves the details of a revenue schedule by specifying the revenue schedule n
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
+api_instance = zuora_client.RevenueSchedulesApi()
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -437,13 +437,13 @@ Create revenue schedule for credit memo item (distribute by date range)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 cmi_id = 'cmi_id_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 try:
@@ -487,13 +487,13 @@ Create revenue schedule for credit memo item (manual distribution)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 cmi_id = 'cmi_id_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 try:
@@ -537,13 +537,13 @@ Create revenue schedule for debit memo item (distribute by date range)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 dmi_id = 'dmi_id_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 try:
@@ -587,13 +587,13 @@ Create revenue schedule for debit memo item (manual distribution)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 dmi_id = 'dmi_id_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 try:
@@ -637,13 +637,13 @@ Creates a revenue schedule for an Invoice Item Adjustment and distribute the rev
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -689,13 +689,13 @@ Creates a revenue schedule for an Invoice Item Adjustment and manually distribut
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -741,13 +741,13 @@ Creates a revenue schedule for an Invoice Item and distribute the revenue by spe
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 invoice_item_id = 'invoice_item_id_example' # str | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -793,13 +793,13 @@ Creates a revenue schedule for an Invoice Item and manually distribute the reven
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 invoice_item_id = 'invoice_item_id_example' # str | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -845,13 +845,13 @@ Creates a revenue schedule by specifying the subscription charge. This method is
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 charge_key = 'charge_key_example' # str | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -897,13 +897,13 @@ Distributes revenue by specifying the revenue schedule number. Request and respo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -949,13 +949,13 @@ Distributes revenue by specifying the recognition start and end dates. Request a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1001,13 +1001,13 @@ Distributes revenue on a specific recognition date. Request and response field d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1053,13 +1053,13 @@ Retrieves basic information of a revenue schedule by specifying the revenue sche
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueSchedulesApi()
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.RevenueSchedulesApi()
+body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

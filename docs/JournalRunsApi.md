@@ -1,4 +1,4 @@
-# swagger_client.JournalRunsApi
+# zuora_client.JournalRunsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -20,12 +20,12 @@ This reference describes how to delete a journal run using the REST API.        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.JournalRunsApi()
+api_instance = zuora_client.JournalRunsApi()
 jr_number = 'jr_number_example' # str | Journal run number. Must be a valid journal run number in the format `JR-00000001`. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -70,12 +70,12 @@ This REST API reference describes how to get information about a journal run. Re
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.JournalRunsApi()
+api_instance = zuora_client.JournalRunsApi()
 jr_number = 'jr_number_example' # str | Journal run number. Must be a valid journal run number in the format `JR-00000001`. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -120,13 +120,13 @@ This REST API reference describes how to create a journal run. Request and respo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.JournalRunsApi()
-body = swagger_client.POSTJournalRunType() # POSTJournalRunType | 
+api_instance = zuora_client.JournalRunsApi()
+body = zuora_client.POSTJournalRunType() # POSTJournalRunType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -170,12 +170,12 @@ This reference describes how to cancel a journal run using the REST API.        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.JournalRunsApi()
+api_instance = zuora_client.JournalRunsApi()
 jr_number = 'jr_number_example' # str | Journal run number. Must be a valid journal run number in the format JR-00000001.  You can only cancel a journal run whose status is \"Pending\", \"Error\", or \"Completed\". 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

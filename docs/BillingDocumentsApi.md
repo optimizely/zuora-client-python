@@ -1,4 +1,4 @@
-# swagger_client.BillingDocumentsApi
+# zuora_client.BillingDocumentsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -17,12 +17,12 @@ Retrieves the information about all billing documents associated with a specifie
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BillingDocumentsApi()
+api_instance = zuora_client.BillingDocumentsApi()
 account_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the customer account that the billing documents are associated with.  
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)

@@ -1,4 +1,4 @@
-# swagger_client.PaymentGatewayReconciliationApi
+# zuora_client.PaymentGatewayReconciliationApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -19,13 +19,13 @@ Sets the Payment status to \"Rejected\", creates a refund for the payment amount
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentGatewayReconciliationApi()
-body = swagger_client.POSTRejectPaymentRequest() # POSTRejectPaymentRequest | 
+api_instance = zuora_client.PaymentGatewayReconciliationApi()
+body = zuora_client.POSTRejectPaymentRequest() # POSTRejectPaymentRequest | 
 payment_id = 'payment_id_example' # str | Unique ID of the payment.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -71,13 +71,13 @@ Sets the Payment status to \"Reversed\", creates a refund for the amount specifi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentGatewayReconciliationApi()
-body = swagger_client.POSTReversePaymentRequest() # POSTReversePaymentRequest | 
+api_instance = zuora_client.PaymentGatewayReconciliationApi()
+body = zuora_client.POSTReversePaymentRequest() # POSTReversePaymentRequest | 
 payment_id = 'payment_id_example' # str | Unique ID of the payment.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -123,13 +123,13 @@ Sets the Payment status to \"Settled\" and returns the Payment object as respons
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentGatewayReconciliationApi()
-body = swagger_client.POSTSettlePaymentRequest() # POSTSettlePaymentRequest | 
+api_instance = zuora_client.PaymentGatewayReconciliationApi()
+body = zuora_client.POSTSettlePaymentRequest() # POSTSettlePaymentRequest | 
 payment_id = 'payment_id_example' # str | Unique ID of the payment.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

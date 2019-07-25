@@ -1,4 +1,4 @@
-# swagger_client.PaymentRunsApi
+# zuora_client.PaymentRunsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -22,12 +22,12 @@ Deletes a payment run. Only payment runs with the Canceled or Error status can b
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentRunsApi()
+api_instance = zuora_client.PaymentRunsApi()
 payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 
 try:
@@ -70,12 +70,12 @@ Retrives the information about a specific payment run.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentRunsApi()
+api_instance = zuora_client.PaymentRunsApi()
 payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -120,12 +120,12 @@ Retrives the summary of a payment run.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentRunsApi()
+api_instance = zuora_client.PaymentRunsApi()
 payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 
 try:
@@ -168,12 +168,12 @@ Retrieves the information about all payment runs. You can define filterable fiel
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentRunsApi()
+api_instance = zuora_client.PaymentRunsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 created_by_id = 'created_by_id_example' # str | This parameter filters the response based on the `createdById` field.  (optional)
@@ -232,13 +232,13 @@ Creates a payment run. You can create a payment run to be executed immediately a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentRunsApi()
-body = swagger_client.POSTPaymentRunRequest() # POSTPaymentRunRequest | 
+api_instance = zuora_client.PaymentRunsApi()
+body = zuora_client.POSTPaymentRunRequest() # POSTPaymentRunRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -282,13 +282,13 @@ Updates the information about an unexecuted payment run. Only pending payment ru
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PaymentRunsApi()
-body = swagger_client.PUTPaymentRunRequest() # PUTPaymentRunRequest | 
+api_instance = zuora_client.PaymentRunsApi()
+body = zuora_client.PUTPaymentRunRequest() # PUTPaymentRunRequest | 
 payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

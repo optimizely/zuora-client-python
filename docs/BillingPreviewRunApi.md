@@ -1,4 +1,4 @@
-# swagger_client.BillingPreviewRunApi
+# zuora_client.BillingPreviewRunApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -18,12 +18,12 @@ Get Billing Preview Run
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BillingPreviewRunApi()
+api_instance = zuora_client.BillingPreviewRunApi()
 billing_preview_run_id = 'billing_preview_run_id_example' # str | Id of the billing preview run. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -68,13 +68,13 @@ Create Billing Preview Run
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BillingPreviewRunApi()
-body = swagger_client.PostBillingPreviewRunParam() # PostBillingPreviewRunParam | 
+api_instance = zuora_client.BillingPreviewRunApi()
+body = zuora_client.PostBillingPreviewRunParam() # PostBillingPreviewRunParam | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:

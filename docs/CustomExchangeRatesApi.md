@@ -1,4 +1,4 @@
-# swagger_client.CustomExchangeRatesApi
+# zuora_client.CustomExchangeRatesApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -17,12 +17,12 @@ This feature is in **Limited Availability**. If you wish to have access to the f
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CustomExchangeRatesApi()
+api_instance = zuora_client.CustomExchangeRatesApi()
 currency = 'currency_example' # str | The target base currency of the tenant. The exchange rates in the response are calculated in relation to the target currency.  The value must be a three-letter currency code, for example, USD.  
 start_date = 'start_date_example' # str | Start date of the date range for which you want to get exchange rates.  The date must be in yyyy-mm-dd format, for example, 2016-01-15. The start date cannot be later than the end date. 
 end_date = 'end_date_example' # str | End date of the date range for which you want to get exchange rates.  The date must be in yyyy-mm-dd format, for example, 2016-01-16. The end date can be a maximum of 90 days after the start date. 

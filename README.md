@@ -1,5 +1,4 @@
 # zuora-client
-
 ## Introduction 
 
 Welcome to the reference for the Zuora REST API!
@@ -334,7 +333,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import swagger_client 
+import zuora_client 
 ```
 
 ### Setuptools
@@ -348,7 +347,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import swagger_client
+import zuora_client
 ```
 
 ## Getting Started
@@ -358,12 +357,12 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
 ac_id = 'ac_id_example' # str | ID of the accounting code you want to delete.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -375,7 +374,7 @@ except ApiException as e:
     print("Exception when calling AccountingCodesApi->d_elete_accounting_code: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
 ac_id = 'ac_id_example' # str | ID of the accounting code you want to query.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -387,7 +386,7 @@ except ApiException as e:
     print("Exception when calling AccountingCodesApi->g_et_accounting_code: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 
@@ -399,8 +398,8 @@ except ApiException as e:
     print("Exception when calling AccountingCodesApi->g_et_all_accounting_codes: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
+body = zuora_client.Object() # Object | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -411,8 +410,8 @@ except ApiException as e:
     print("Exception when calling AccountingCodesApi->p_ost_accounting_code: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.Object() # Object | 
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
+body = zuora_client.Object() # Object | 
 ac_id = 'ac_id_example' # str | ID of the accounting code you want to update.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -424,7 +423,7 @@ except ApiException as e:
     print("Exception when calling AccountingCodesApi->p_ut_accounting_code: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
 ac_id = 'ac_id_example' # str | ID of the accounting code you want to activate.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -436,7 +435,7 @@ except ApiException as e:
     print("Exception when calling AccountingCodesApi->p_ut_activate_accounting_code: %s\n" % e)
 
 # create an instance of the API class
-api_instance = swagger_client.AccountingCodesApi(swagger_client.ApiClient(configuration))
+api_instance = zuora_client.AccountingCodesApi(zuora_client.ApiClient(configuration))
 ac_id = 'ac_id_example' # str | ID of the accounting code you want to deactivate.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

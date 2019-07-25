@@ -1,4 +1,4 @@
-# swagger_client.AttachmentsApi
+# zuora_client.AttachmentsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -21,12 +21,12 @@ Use the Delete Attachment REST request to delete an attachment from a Zuora obje
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AttachmentsApi()
+api_instance = zuora_client.AttachmentsApi()
 attachment_id = 'attachment_id_example' # str | Id of the attachment to be deleted.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -71,12 +71,12 @@ Use the View Attachment REST request to retrieve information about an attachment
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AttachmentsApi()
+api_instance = zuora_client.AttachmentsApi()
 attachment_id = 'attachment_id_example' # str | Id of the attachment you want to view.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -121,12 +121,12 @@ Use the View Attachment REST request to get a list of attachments on an account,
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AttachmentsApi()
+api_instance = zuora_client.AttachmentsApi()
 object_type = 'object_type_example' # str | The type of object to list attachements for. 
 object_key = 'object_key_example' # str | ID of the object to list attachements for.  - If `object-type` is `account`, specify an account ID.  - If `object-type` is `invoice`, specify an invoice ID.  - If `object-type` is `subscription`, specify a subscription number. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -175,12 +175,12 @@ Use the Add Attachment REST request with a multipart/form-data to attach a docum
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AttachmentsApi()
+api_instance = zuora_client.AttachmentsApi()
 file = 'file_example' # file | 
 associated_object_type = 'associated_object_type_example' # str | Specify one of the following values: Account, Subscription, or Invoice. 
 associated_object_key = 'associated_object_key_example' # str | For the Subscription type, specify the Subscription Number. An attachment is tied to the Subscription Number and thus viewable with every subscription version.  For Account and Invoice, specify the id. 
@@ -231,14 +231,14 @@ Use the Edit Attachment REST request to make changes to the descriptive fields o
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AttachmentsApi()
+api_instance = zuora_client.AttachmentsApi()
 attachment_id = 'attachment_id_example' # str | Id of the attachment to be updated.
-body = swagger_client.PUTAttachmentType() # PUTAttachmentType |  (optional)
+body = zuora_client.PUTAttachmentType() # PUTAttachmentType |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:

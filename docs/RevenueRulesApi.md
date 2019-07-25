@@ -1,4 +1,4 @@
-# swagger_client.RevenueRulesApi
+# zuora_client.RevenueRulesApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -18,12 +18,12 @@ Get revenue recognition rule by product rate plan charge
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueRulesApi()
+api_instance = zuora_client.RevenueRulesApi()
 charge_key = 'charge_key_example' # str | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
 
 try:
@@ -66,12 +66,12 @@ Retrieves the revenue recognition rule associated with a subscription charge by 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RevenueRulesApi()
+api_instance = zuora_client.RevenueRulesApi()
 charge_key = 'charge_key_example' # str | The unique ID of the subscription rate plan charge. For example, 402892793e173340013e173b81000012. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

@@ -1,4 +1,4 @@
-# swagger_client.NotificationsApi
+# zuora_client.NotificationsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -28,12 +28,12 @@ Deletes an email template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template to be deleted.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
@@ -81,12 +81,12 @@ Deletes a notification definition.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the notification definition to be deleted.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
@@ -134,12 +134,12 @@ This REST API reference describes how to get a notification history for callouts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 end_time = '2013-10-20T19:20:30+01:00' # datetime | The final date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss. (optional)
@@ -196,12 +196,12 @@ This REST API reference describes how to get a notification history for notifica
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 end_time = '2013-10-20T19:20:30+01:00' # datetime | The end date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss. The maximum date range (endTime - startTime) is three days. (optional)
@@ -256,12 +256,12 @@ Queries the email template of the specified ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
@@ -310,12 +310,12 @@ Queries the notification definition of the given ID.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the notification definition.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
@@ -364,12 +364,12 @@ Queries email templates.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -424,12 +424,12 @@ Queries notification definitions with the specified filters.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
+api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -486,13 +486,13 @@ Creates an email template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
-body = swagger_client.POSTPublicEmailTemplateRequest() # POSTPublicEmailTemplateRequest | The request body to create an email template.
+api_instance = zuora_client.NotificationsApi()
+body = zuora_client.POSTPublicEmailTemplateRequest() # POSTPublicEmailTemplateRequest | The request body to create an email template.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -540,13 +540,13 @@ Creates a notification definition. If a filter rule is specified, it will be eva
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
-body = swagger_client.POSTPublicNotificationDefinitionRequest() # POSTPublicNotificationDefinitionRequest | The request body used to create the notification definition.
+api_instance = zuora_client.NotificationsApi()
+body = zuora_client.POSTPublicNotificationDefinitionRequest() # POSTPublicNotificationDefinitionRequest | The request body used to create the notification definition.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -594,13 +594,13 @@ Updates an email template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
-body = swagger_client.PUTPublicEmailTemplateRequest() # PUTPublicEmailTemplateRequest | The request body to update an email template.
+api_instance = zuora_client.NotificationsApi()
+body = zuora_client.PUTPublicEmailTemplateRequest() # PUTPublicEmailTemplateRequest | The request body to update an email template.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template to be updated.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
@@ -650,13 +650,13 @@ Updates a notification definition.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NotificationsApi()
-body = swagger_client.PUTPublicNotificationDefinitionRequest() # PUTPublicNotificationDefinitionRequest | The request body of the notification definition to be updated.
+api_instance = zuora_client.NotificationsApi()
+body = zuora_client.PUTPublicNotificationDefinitionRequest() # PUTPublicNotificationDefinitionRequest | The request body of the notification definition to be updated.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token. 
 id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the notification definition to be updated.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)

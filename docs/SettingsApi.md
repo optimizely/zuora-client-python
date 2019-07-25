@@ -1,4 +1,4 @@
-# swagger_client.SettingsApi
+# zuora_client.SettingsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -17,12 +17,12 @@ This REST API reference describes how to get the revenue automation start date. 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SettingsApi()
+api_instance = zuora_client.SettingsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:

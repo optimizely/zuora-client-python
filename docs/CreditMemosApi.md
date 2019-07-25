@@ -1,4 +1,4 @@
-# swagger_client.CreditMemosApi
+# zuora_client.CreditMemosApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -40,12 +40,12 @@ Delete credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -90,12 +90,12 @@ Get breakdown of credit memo by order
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_number = 'credit_memo_number_example' # str | Number of credit memo to be broken down.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -140,12 +140,12 @@ Get credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -190,12 +190,12 @@ Get credit memo item
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 cmitemid = 'cmitemid_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -244,12 +244,12 @@ Get credit memo part item
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 partid = 'partid_example' # str | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
 itempartid = 'itempartid_example' # str | The unique ID of a specific credit memo part item. You can get the credit memo part item ID from the response of [Get credit memo part items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItemParts). 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
@@ -298,12 +298,12 @@ Get credit memo part items
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 partid = 'partid_example' # str | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). . 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -352,12 +352,12 @@ Get credit memo items
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
@@ -436,12 +436,12 @@ Get credit memo part
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 partid = 'partid_example' # str | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -488,12 +488,12 @@ Get credit memo parts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
@@ -540,12 +540,12 @@ Get credit memos
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 account_id = 'account_id_example' # str | This parameter filters the response based on the `accountId` field.   (optional)
@@ -632,12 +632,12 @@ Get taxation items of credit memo item
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 cmitemid = 'cmitemid_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -688,13 +688,13 @@ Create credit memo from charge
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.CreditMemoFromChargeType() # CreditMemoFromChargeType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.CreditMemoFromChargeType() # CreditMemoFromChargeType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str |  The minor version of the Zuora REST API. See [Minor Version](https://www.zuora.com/developer/api-reference/#section/API-Versions/Minor-Version) for information about REST API version control.   This header affects the availability of the following fields: * amount * memoItemAmount  (optional)
 
@@ -740,12 +740,12 @@ Create credit memo PDF
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of the credit memo that you want to create a PDF file for. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -790,13 +790,13 @@ Email credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.PostCreditMemoEmailRequestType() # PostCreditMemoEmailRequestType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.PostCreditMemoEmailRequestType() # PostCreditMemoEmailRequestType | 
 credit_memo_id = 'credit_memo_id_example' # str | The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -842,13 +842,13 @@ Refund credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.PostNonRefRefundType() # PostNonRefRefundType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.PostNonRefRefundType() # PostNonRefRefundType | 
 creditmemo_id = 'creditmemo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -894,13 +894,13 @@ Request breakdown of credit memo items by order
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.POSTCreditMemoItemsForOrderBreakdown() # POSTCreditMemoItemsForOrderBreakdown | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.POSTCreditMemoItemsForOrderBreakdown() # POSTCreditMemoItemsForOrderBreakdown | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -944,12 +944,12 @@ Upload file for credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The ID of the credit memo that you want to upload a PDF file for. For example, 402890555a7e9791015a879f064a0054. 
 file = 'file_example' # file |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
@@ -998,13 +998,13 @@ Create taxation items for credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.POSTTaxationItemListForCMType() # POSTTaxationItemListForCMType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.POSTTaxationItemListForCMType() # POSTTaxationItemListForCMType | 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1050,13 +1050,13 @@ Apply credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.ApplyCreditMemoType() # ApplyCreditMemoType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.ApplyCreditMemoType() # ApplyCreditMemoType | 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1102,12 +1102,12 @@ Cancel credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1152,12 +1152,12 @@ Post credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1202,13 +1202,13 @@ Unapply credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.UnapplyCreditMemoType() # UnapplyCreditMemoType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.UnapplyCreditMemoType() # UnapplyCreditMemoType | 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1254,12 +1254,12 @@ Unpost credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
+api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -1304,13 +1304,13 @@ Update credit memo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CreditMemosApi()
-body = swagger_client.PUTCreditMemoType() # PUTCreditMemoType | 
+api_instance = zuora_client.CreditMemosApi()
+body = zuora_client.PUTCreditMemoType() # PUTCreditMemoType | 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

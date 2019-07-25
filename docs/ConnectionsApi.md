@@ -1,4 +1,4 @@
-# swagger_client.ConnectionsApi
+# zuora_client.ConnectionsApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -17,12 +17,12 @@ Establishes a connection to the Zuora REST API service based on a valid user cre
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConnectionsApi()
+api_instance = zuora_client.ConnectionsApi()
 api_access_key_id = 'api_access_key_id_example' # str | Account username 
 api_secret_access_key = 'api_secret_access_key_example' # str | Account password 
 content_type = 'content_type_example' # str | Must be set to \"application/json\" 

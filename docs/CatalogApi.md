@@ -1,4 +1,4 @@
-# swagger_client.CatalogApi
+# zuora_client.CatalogApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -19,12 +19,12 @@ Retrieves the entire product catalog, including all products, features, and thei
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CatalogApi()
+api_instance = zuora_client.CatalogApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page_size = 56 # int | Number of rows returned per page.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the `productRatePlans` field.  (optional)
@@ -71,12 +71,12 @@ Retrieves detailed information about a specific product, including information a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CatalogApi()
+api_instance = zuora_client.CatalogApi()
 product_id = 'product_id_example' # str | The unique ID of the product you want to retrieve. For example, 8a808255575bdae4015774e9602e16fe.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the `productRatePlans` field.  (optional)
@@ -123,13 +123,13 @@ Multi-entity: Share a product with an Entity
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CatalogApi()
-body = swagger_client.POSTCatalogType() # POSTCatalogType | 
+api_instance = zuora_client.CatalogApi()
+body = zuora_client.POSTCatalogType() # POSTCatalogType | 
 product_id = 'product_id_example' # str | The unique ID of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 

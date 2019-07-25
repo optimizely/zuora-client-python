@@ -1,4 +1,4 @@
-# swagger_client.OAuthApi
+# zuora_client.OAuthApi
 
 All URIs are relative to *https://rest.zuora.com/*
 
@@ -17,12 +17,12 @@ Generates a bearer token that enables an OAuth client to authenticate with the Z
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import zuora_client
+from zuora_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.OAuthApi()
+api_instance = zuora_client.OAuthApi()
 client_id = 'client_id_example' # str | 
 client_secret = 'client_secret_example' # str | 
 grant_type = 'grant_type_example' # str | 
