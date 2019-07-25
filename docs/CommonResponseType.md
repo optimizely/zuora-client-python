@@ -1,0 +1,11 @@
+# CommonResponseType
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**process_id** | **str** | The Id of the process that handle the operation.  | [optional] 
+**reasons** | **list[object]** |  | [optional] 
+**success** | **bool** | Indicates whether the call succeeded.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
