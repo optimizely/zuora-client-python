@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **auto_apply_credit_memo** | **bool** | **Note:** The Invoice Settlement feature is in **Limited Availability**. This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).  Whether to automatically apply a posted credit memo to one or more receivables in the payment run.  | [optional] 
 **auto_apply_unapplied_payment** | **bool** | **Note:** The Invoice Settlement feature is in **Limited Availability**. This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).  Whether to automatically apply unapplied payments to  one or more receivables in the payment run.  | [optional] 
 **batch** | **str** | The alias name given to a batch.  | [optional] 
-**bill_cycle_day** | **int** | The billing cycle day (BCD), the day of the month when a bill run generates invoices for the account.   | [optional] 
+**bill_cycle_day** | **str** | The billing cycle day (BCD), the day of the month when a bill run generates invoices for the account.   | [optional] 
 **billing_run_id** | **str** | The ID of the bill run.  | [optional] 
 **collect_payment** | **bool** | Whether to process electronic payments during the execution of payment runs.   | [optional] 
 **completed_on** | **datetime** | The date and time when the payment run is completed, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format. For example, 2017-03-01 11:39:58.  | [optional] 

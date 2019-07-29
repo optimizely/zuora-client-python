@@ -239,7 +239,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72.
+invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -254,7 +254,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **invoice_item_adj_key** | **str**| ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. | 
+ **invoice_item_adj_key** | **str**| ID of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**p_ost_debit_memo_from_prpc**](DebitMemosApi.md#p_ost_debit_memo_from_prpc) | **POST** /v1/debitmemos | Create debit memo from charge
 [**p_ost_debit_memo_pdf**](DebitMemosApi.md#p_ost_debit_memo_pdf) | **POST** /v1/debitmemos/{debitMemoId}/pdfs | Create debit memo PDF
 [**p_ost_email_debit_memo**](DebitMemosApi.md#p_ost_email_debit_memo) | **POST** /v1/debitmemos/{debitMemoId}/emails | Email debit memo
-[**p_ost_upload_file_for_debit_memo**](DebitMemosApi.md#p_ost_upload_file_for_debit_memo) | **POST** /v1/debitmemos/{debitMemoId} | Upload file for debit memo
+[**p_ost_upload_file_for_debit_memo**](DebitMemosApi.md#p_ost_upload_file_for_debit_memo) | **POST** /v1/debitmemos/{debitMemoId}/files | Upload file for debit memo
 [**p_ostdm_taxation_items**](DebitMemosApi.md#p_ostdm_taxation_items) | **POST** /v1/debitmemos/{debitMemoId}/taxationitems | Create taxation items for debit memo
 [**p_ut_batch_update_debit_memos**](DebitMemosApi.md#p_ut_batch_update_debit_memos) | **PUT** /v1/debitmemos | Update debit memos
 [**p_ut_cancel_debit_memo**](DebitMemosApi.md#p_ut_cancel_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId}/cancel | Cancel debit memo

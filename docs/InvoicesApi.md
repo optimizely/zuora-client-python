@@ -5,16 +5,16 @@ All URIs are relative to *https://rest.zuora.com/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**g_et_invoice_application_parts**](InvoicesApi.md#g_et_invoice_application_parts) | **GET** /v1/invoices/{invoiceId}/application-parts | Get invoice application parts
-[**g_et_invoice_files**](InvoicesApi.md#g_et_invoice_files) | **GET** /v1/invoices/{invoice-id}/files | Get invoice files
-[**g_et_invoice_items**](InvoicesApi.md#g_et_invoice_items) | **GET** /v1/invoices/{invoice-id}/items | Get invoice items
-[**g_et_taxation_items_of_invoice_item**](InvoicesApi.md#g_et_taxation_items_of_invoice_item) | **GET** /v1/invoices/{invoice-id}/items/{item-id}/taxation-items | Get taxation items of invoice item
-[**object_delete_invoice**](InvoicesApi.md#object_delete_invoice) | **DELETE** /v1/object/invoice/{id} | CRUD: Delete Invoice
-[**object_get_invoice**](InvoicesApi.md#object_get_invoice) | **GET** /v1/object/invoice/{id} | CRUD: Retrieve Invoice
-[**object_put_invoice**](InvoicesApi.md#object_put_invoice) | **PUT** /v1/object/invoice/{id} | CRUD: Update Invoice
+[**g_et_invoice_files**](InvoicesApi.md#g_et_invoice_files) | **GET** /v1/invoices/{invoiceId}/files | Get invoice files
+[**g_et_invoice_items**](InvoicesApi.md#g_et_invoice_items) | **GET** /v1/invoices/{invoiceId}/items | Get invoice items
+[**g_et_taxation_items_of_invoice_item**](InvoicesApi.md#g_et_taxation_items_of_invoice_item) | **GET** /v1/invoices/{invoiceId}/items/{itemId}/taxation-items | Get taxation items of invoice item
+[**object_delete_invoice**](InvoicesApi.md#object_delete_invoice) | **DELETE** /v1/object/invoice/{id} | CRUD: Delete invoice
+[**object_get_invoice**](InvoicesApi.md#object_get_invoice) | **GET** /v1/object/invoice/{id} | CRUD: Get invoice
+[**object_put_invoice**](InvoicesApi.md#object_put_invoice) | **PUT** /v1/object/invoice/{id} | CRUD: Update invoice
 [**p_ost_credit_memo_from_invoice**](InvoicesApi.md#p_ost_credit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/creditmemos | Create credit memo from invoice
 [**p_ost_debit_memo_from_invoice**](InvoicesApi.md#p_ost_debit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/debitmemos | Create debit memo from invoice
 [**p_ost_email_invoice**](InvoicesApi.md#p_ost_email_invoice) | **POST** /v1/invoices/{invoiceId}/emails | Email invoice
-[**p_ost_upload_file_for_invoice**](InvoicesApi.md#p_ost_upload_file_for_invoice) | **POST** /v1/invoices/{invoiceId} | Upload file for invoice
+[**p_ost_upload_file_for_invoice**](InvoicesApi.md#p_ost_upload_file_for_invoice) | **POST** /v1/invoices/{invoiceId}/files | Upload file for invoice
 [**p_ut_batch_update_invoices**](InvoicesApi.md#p_ut_batch_update_invoices) | **PUT** /v1/invoices | Update invoices
 [**p_ut_reverse_invoice**](InvoicesApi.md#p_ut_reverse_invoice) | **PUT** /v1/invoices/{invoiceId}/reverse | Reverse invoice
 [**p_ut_update_invoice**](InvoicesApi.md#p_ut_update_invoice) | **PUT** /v1/invoices/{invoiceId} | Update invoice
@@ -233,7 +233,7 @@ No authorization required
 # **object_delete_invoice**
 > ProxyDeleteResponse object_delete_invoice(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
-CRUD: Delete Invoice
+CRUD: Delete invoice
 
 ### Example
 ```python
@@ -250,7 +250,7 @@ zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 
 try:
-    # CRUD: Delete Invoice
+    # CRUD: Delete invoice
     api_response = api_instance.object_delete_invoice(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
     pprint(api_response)
 except ApiException as e:
@@ -283,7 +283,7 @@ No authorization required
 # **object_get_invoice**
 > ProxyGetInvoice object_get_invoice(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
 
-CRUD: Retrieve Invoice
+CRUD: Get invoice
 
 ### Example
 ```python
@@ -301,7 +301,7 @@ zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracin
 fields = 'fields_example' # str | Object fields to return (optional)
 
 try:
-    # CRUD: Retrieve Invoice
+    # CRUD: Get invoice
     api_response = api_instance.object_get_invoice(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -335,7 +335,7 @@ No authorization required
 # **object_put_invoice**
 > ProxyCreateOrModifyResponse object_put_invoice(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
-CRUD: Update Invoice
+CRUD: Update invoice
 
 ### Example
 ```python
@@ -353,7 +353,7 @@ zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 
 try:
-    # CRUD: Update Invoice
+    # CRUD: Update invoice
     api_response = api_instance.object_put_invoice(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
     pprint(api_response)
 except ApiException as e:

@@ -526,7 +526,7 @@ No authorization required
 
 CRUD: Create payment
 
-Creates a payment. 
+Creates a payment.  **Note:** If you have the Invoice Settlement feature enabled, you cannot use this operation to create a payment. 
 
 ### Example
 ```python

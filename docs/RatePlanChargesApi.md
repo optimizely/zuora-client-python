@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.zuora.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**object_get_rate_plan_charge**](RatePlanChargesApi.md#object_get_rate_plan_charge) | **GET** /v1/object/rate-plan-charge/{id} | CRUD: Retrieve RatePlanCharge
+[**object_get_rate_plan_charge**](RatePlanChargesApi.md#object_get_rate_plan_charge) | **GET** /v1/object/rate-plan-charge/{id} | CRUD: Get rate plan charge
 
 # **object_get_rate_plan_charge**
 > ProxyGetRatePlanCharge object_get_rate_plan_charge(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
 
-CRUD: Retrieve RatePlanCharge
+CRUD: Get rate plan charge
 
 ### Example
 ```python
@@ -27,7 +27,7 @@ zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracin
 fields = 'fields_example' # str | Object fields to return (optional)
 
 try:
-    # CRUD: Retrieve RatePlanCharge
+    # CRUD: Get rate plan charge
     api_response = api_instance.object_get_rate_plan_charge(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
     pprint(api_response)
 except ApiException as e:

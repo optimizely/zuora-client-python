@@ -227,7 +227,7 @@ No authorization required
 
 Scrub contact
 
- Scrubs the sensitive data of a specific contact.   You can use this operation to replace all sensitive data in a contact and its related contact snapshot with dummy values that will be stored in Zuora databases.   **Note**: To use this operation, you must ensure that the \"Scrub Sensitive Data of Contact\" billing permission is enabled in your user role. Contact your tenant administrator if you want to enable this permission. See [Scrub Contacts](https://knowledgecenter.zuora.com/BC_Subscription_Management/Customer_Accounts/A_How_to_Manage_Customer_Accounts/B_Key_Contacts/Scrub_Contacts) for more information. 
+ Scrubs the sensitive data of a specific contact.   You can use this operation to replace all sensitive data in a contact and its related contact snapshot with dummy values that will be stored in Zuora databases.   After scrubbing a contact, it is good practice to delete it. Otherwise, it might cause errors in subsequent operations.  **Note**: To use this operation, you must ensure that the \"Scrub Sensitive Data of Contact\" billing permission is enabled in your user role. Contact your tenant administrator if you want to enable this permission. See [Scrub Contacts](https://knowledgecenter.zuora.com/BC_Subscription_Management/Customer_Accounts/A_How_to_Manage_Customer_Accounts/B_Key_Contacts/Scrub_Contacts) for more information. 
 
 ### Example
 ```python

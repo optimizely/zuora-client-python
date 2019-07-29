@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**p_ost_email_credit_memo**](CreditMemosApi.md#p_ost_email_credit_memo) | **POST** /v1/creditmemos/{creditMemoId}/emails | Email credit memo
 [**p_ost_refund_credit_memo**](CreditMemosApi.md#p_ost_refund_credit_memo) | **POST** /v1/creditmemos/{creditmemoId}/refunds | Refund credit memo
 [**p_ost_request_breakdown_credit_memo_items_by_order**](CreditMemosApi.md#p_ost_request_breakdown_credit_memo_items_by_order) | **POST** /v1/creditmemos/items/amountBreakdownByOrder | Request breakdown of credit memo items by order
-[**p_ost_upload_file_for_credit_memo**](CreditMemosApi.md#p_ost_upload_file_for_credit_memo) | **POST** /v1/creditmemos/{creditMemoId} | Upload file for credit memo
+[**p_ost_upload_file_for_credit_memo**](CreditMemosApi.md#p_ost_upload_file_for_credit_memo) | **POST** /v1/creditmemos/{creditMemoId}/files | Upload file for credit memo
 [**p_ostcm_taxation_items**](CreditMemosApi.md#p_ostcm_taxation_items) | **POST** /v1/creditmemos/{creditMemoId}/taxationitems | Create taxation items for credit memo
 [**p_ut_apply_credit_memo**](CreditMemosApi.md#p_ut_apply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/apply | Apply credit memo
 [**p_ut_cancel_credit_memo**](CreditMemosApi.md#p_ut_cancel_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/cancel | Cancel credit memo

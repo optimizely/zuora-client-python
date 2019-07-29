@@ -3,5 +3,5 @@
 #
 # pre-requisite: ensure swagger-codegen is installed (on Mac, brew install swagger-codegen)
 
-swagger-codegen generate -i https://assets.zuora.com/zuora-documentation/swagger-codegen-workaround.yaml -l python -c config.json
+swagger-codegen generate -i https://assets.zuora.com/zuora-documentation/swagger.yaml -l python -c config.json
 

@@ -386,7 +386,7 @@ No authorization required
 
 Cancel authorization
 
-**Note:** If you wish to enable this feature, submit a request at [Zuora Global Support](http://support.zuora.com/).   Allows you to cancel an authorization. The payment gateways that support this operation include Verifi, CyberSource 1.28, and CyberSource 1.97. 
+**Note:** If you wish to enable this feature, submit a request at [Zuora Global Support](http://support.zuora.com/).   Allows you to cancel an authorization. The payment gateways that support this operation include Verifi, CyberSource 1.28, CyberSource 1.97, Chase Paymentech Orbital, and Ingenico ePayments. 
 
 ### Example
 ```python
@@ -490,7 +490,7 @@ No authorization required
 
 Create authorization
 
-**Note:** If you wish to enable this feature, submit a request at [Zuora Global Support](http://support.zuora.com/).   Enables you to authorize the availability of funds for a transaction but delay the capture of funds until a later time. The payment gateways that support this operation include Verifi, CyberSource 1.28, and CyberSource 1.97. 
+**Note:** If you wish to enable this feature, submit a request at [Zuora Global Support](http://support.zuora.com/).  Enables you to authorize the availability of funds for a transaction but delay the capture of funds until a later time. Subsequently, use [CRUD: Create payment](https://www.zuora.com/developer/api-reference/#operation/Object_POSTPayment) to capture the authorized funds, or use [Cancel authorization](https://www.zuora.com/developer/api-reference/#operation/POST_CancelAuthorization) to cancel the authorization.   The payment gateways that support this operation include Verifi, CyberSource 1.28, CyberSource 1.97, Chase Paymentech Orbital, and Ingenico ePayments.  **Known limitation:** If you have the Invoice Settlement feature enabled, you cannot use the \"CRUD: Create payment\" operation to capture the funds. 
 
 ### Example
 ```python
@@ -646,7 +646,7 @@ No authorization required
 
 Create payment method
 
-You can use this operation to create a payment method for a customer account. This operation supports the payment methods listed below.  ### PayPal Express Checkout The following request body fields are specific to this payment method: * `BAID` (required) * `email` (required)  ### PayPal Native Express Checkout The following request body fields are specific to this payment method: * `BAID` (required) * `email` (optional)  ### PayPal Adaptive The following request body fields are specific to this payment method: * `preapprovalKey` (required) * `email` (required)  ### Credit Card **Note:** This feature is in **Limited Availability**. We are actively soliciting feedback from a small set of early adopters before releasing as generally available.  The following request body fields are specific to this payment method: * `cardHolderInfo` * `cardNumber` (required) * `cardType` (required) * `expirationMonth` (required) * `expirationYear` (required) * `mitConsentAgreementRef` * `mitConsentAgreementSrc` * `mitNetworkTransactionId` * `mitProfileAction` * `mitProfileType` * `mitProfileAgreedOn` * `securityCode` 
+You can use this operation to create a payment method for a customer account. This operation supports the payment methods listed below.  ### PayPal Express Checkout The following request body fields are specific to this payment method: * `BAID` (required) * `email` (required)  ### PayPal Native Express Checkout The following request body fields are specific to this payment method: * `BAID` (required) * `email` (optional)  ### PayPal Adaptive The following request body fields are specific to this payment method: * `preapprovalKey` (required) * `email` (required)  ### Credit Card **Note:** This feature is in **Limited Availability**. We are actively soliciting feedback from a small set of early adopters before releasing as generally available.  The following request body fields are specific to this payment method: * `cardHolderInfo` (`cardHolderName` required) * `cardNumber` (required) * `cardType` (required) * `expirationMonth` (required) * `expirationYear` (required) * `mitConsentAgreementRef` * `mitConsentAgreementSrc` * `mitNetworkTransactionId` * `mitProfileAction` * `mitProfileType` * `mitProfileAgreedOn` * `securityCode`   ### ACH The following request body fields are applicable to this payment method: * `bankABACode` (required) * `achBankAccountName` (required) * `achBankAccountNumber` (required) * `achBankAccountType` (required) * `achBankName` (required) * `addressLine1` * `addressLine2` * `phone` * `email` * `city` * `country` * `state` * `zipCode` 
 
 ### Example
 ```python
