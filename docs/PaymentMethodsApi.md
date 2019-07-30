@@ -1,6 +1,6 @@
 # zuora_client.PaymentMethodsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**p_ut_payment_methods_credit_card**](PaymentMethodsApi.md#p_ut_payment_methods_credit_card) | **PUT** /v1/payment-methods/credit-cards/{payment-method-id} | Update credit card payment method
 [**p_ut_scrub_payment_methods**](PaymentMethodsApi.md#p_ut_scrub_payment_methods) | **PUT** /v1/payment-methods/{payment-method-id}/scrub | Scrub payment method
 [**p_ut_verify_payment_methods**](PaymentMethodsApi.md#p_ut_verify_payment_methods) | **PUT** /v1/payment-methods/{payment-method-id}/verify | Verify payment method
+
 
 # **d_elete_payment_methods**
 > CommonResponseType d_elete_payment_methods(payment_method_id, zuora_entity_ids=zuora_entity_ids)
@@ -68,8 +69,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -92,7 +93,7 @@ from pprint import pprint
 api_instance = zuora_client.PaymentMethodsApi()
 account_key = 'account_key_example' # str | Account number or account ID.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # Get credit card payment methods for account
@@ -108,7 +109,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_key** | **str**| Account number or account ID. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -120,8 +121,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -144,7 +145,7 @@ from pprint import pprint
 api_instance = zuora_client.PaymentMethodsApi()
 payment_method_id = 'payment_method_id_example' # str | ID of a payment method. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-include_all = true # bool | Specifies whether to retrieve all the stored credential profiles within the payment method.  By default, Zuora returns only the stored credential profiles with `Agreed` or `Active` status. If you set this parameter to `true`, Zuora returns all the stored credential profiles.  (optional)
+include_all = false # bool | Specifies whether to retrieve all the stored credential profiles within the payment method.  By default, Zuora returns only the stored credential profiles with `Agreed` or `Active` status. If you set this parameter to `true`, Zuora returns all the stored credential profiles.  (optional) (default to false)
 
 try:
     # Get stored credential profiles
@@ -160,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_method_id** | **str**| ID of a payment method.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **include_all** | **bool**| Specifies whether to retrieve all the stored credential profiles within the payment method.  By default, Zuora returns only the stored credential profiles with &#x60;Agreed&#x60; or &#x60;Active&#x60; status. If you set this parameter to &#x60;true&#x60;, Zuora returns all the stored credential profiles.  | [optional] 
+ **include_all** | **bool**| Specifies whether to retrieve all the stored credential profiles within the payment method.  By default, Zuora returns only the stored credential profiles with &#x60;Agreed&#x60; or &#x60;Active&#x60; status. If you set this parameter to &#x60;true&#x60;, Zuora returns all the stored credential profiles.  | [optional] [default to false]
 
 ### Return type
 
@@ -172,8 +173,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -181,6 +182,8 @@ No authorization required
 > ProxyDeleteResponse object_delete_payment_method(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
 CRUD: Delete payment method
+
+
 
 ### Example
 ```python
@@ -210,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Object id | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -222,8 +225,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -231,6 +234,8 @@ No authorization required
 > ProxyGetPaymentMethod object_get_payment_method(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
 
 CRUD: Get payment method
+
+
 
 ### Example
 ```python
@@ -261,7 +266,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Object id | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **fields** | **str**| Object fields to return | [optional] 
 
 ### Return type
@@ -274,15 +279,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **object_post_payment_method**
-> ProxyCreateOrModifyResponse object_post_payment_method(body, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+> ProxyCreateOrModifyResponse object_post_payment_method(create_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
 CRUD: Create payment method
+
+
 
 ### Example
 ```python
@@ -294,13 +301,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.Object() # Object | 
+create_request = zuora_client.ProxyCreatePaymentMethod() # ProxyCreatePaymentMethod | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 
 try:
     # CRUD: Create payment method
-    api_response = api_instance.object_post_payment_method(body, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+    api_response = api_instance.object_post_payment_method(create_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->object_post_payment_method: %s\n" % e)
@@ -310,9 +317,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
+ **create_request** | [**ProxyCreatePaymentMethod**](ProxyCreatePaymentMethod.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -325,14 +332,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **object_put_payment_method**
-> ProxyCreateOrModifyResponse object_put_payment_method(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+> ProxyCreateOrModifyResponse object_put_payment_method(id, modify_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
 CRUD: Update payment method
+
+
 
 ### Example
 ```python
@@ -344,14 +353,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.Object() # Object | 
 id = 'id_example' # str | Object id
+modify_request = zuora_client.ProxyModifyPaymentMethod() # ProxyModifyPaymentMethod | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 
 try:
     # CRUD: Update payment method
-    api_response = api_instance.object_put_payment_method(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+    api_response = api_instance.object_put_payment_method(id, modify_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->object_put_payment_method: %s\n" % e)
@@ -361,10 +370,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **id** | **str**| Object id | 
+ **modify_request** | [**ProxyModifyPaymentMethod**](ProxyModifyPaymentMethod.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -377,12 +386,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_cancel_authorization**
-> POSTVoidAuthorizeResponse p_ost_cancel_authorization(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+> POSTVoidAuthorizeResponse p_ost_cancel_authorization(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Cancel authorization
 
@@ -398,13 +407,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.POSTVoidAuthorize() # POSTVoidAuthorize | 
 payment_method_id = 'payment_method_id_example' # str | The unique ID of the payment method where the authorization is cancelled. 
+request = zuora_client.POSTVoidAuthorize() # POSTVoidAuthorize | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Cancel authorization
-    api_response = api_instance.p_ost_cancel_authorization(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_cancel_authorization(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ost_cancel_authorization: %s\n" % e)
@@ -414,8 +423,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTVoidAuthorize**](POSTVoidAuthorize.md)|  | 
  **payment_method_id** | **str**| The unique ID of the payment method where the authorization is cancelled.  | 
+ **request** | [**POSTVoidAuthorize**](POSTVoidAuthorize.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -481,12 +490,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_create_authorization**
-> POSTAuthorizeResponse p_ost_create_authorization(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+> POSTAuthorizeResponse p_ost_create_authorization(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Create authorization
 
@@ -502,13 +511,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.POSTDelayAuthorizeCapture() # POSTDelayAuthorizeCapture | 
 payment_method_id = 'payment_method_id_example' # str | The unique ID of the payment method where the authorization is created. 
+request = zuora_client.POSTDelayAuthorizeCapture() # POSTDelayAuthorizeCapture | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create authorization
-    api_response = api_instance.p_ost_create_authorization(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_create_authorization(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ost_create_authorization: %s\n" % e)
@@ -518,8 +527,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTDelayAuthorizeCapture**](POSTDelayAuthorizeCapture.md)|  | 
  **payment_method_id** | **str**| The unique ID of the payment method where the authorization is created.  | 
+ **request** | [**POSTDelayAuthorizeCapture**](POSTDelayAuthorizeCapture.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -538,7 +547,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_create_stored_credential_profile**
-> ModifiedStoredCredentialProfileResponse p_ost_create_stored_credential_profile(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+> ModifiedStoredCredentialProfileResponse p_ost_create_stored_credential_profile(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Create stored credential profile
 
@@ -554,13 +563,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.CreateStoredCredentialProfileRequest() # CreateStoredCredentialProfileRequest | 
 payment_method_id = 'payment_method_id_example' # str | ID of a payment method. 
+request = zuora_client.CreateStoredCredentialProfileRequest() # CreateStoredCredentialProfileRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create stored credential profile
-    api_response = api_instance.p_ost_create_stored_credential_profile(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_create_stored_credential_profile(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ost_create_stored_credential_profile: %s\n" % e)
@@ -570,8 +579,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateStoredCredentialProfileRequest**](CreateStoredCredentialProfileRequest.md)|  | 
  **payment_method_id** | **str**| ID of a payment method.  | 
+ **request** | [**CreateStoredCredentialProfileRequest**](CreateStoredCredentialProfileRequest.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -585,7 +594,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -637,12 +646,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_payment_methods**
-> POSTPaymentMethodResponse p_ost_payment_methods(body, zuora_entity_ids=zuora_entity_ids)
+> POSTPaymentMethodResponse p_ost_payment_methods(request, zuora_entity_ids=zuora_entity_ids)
 
 Create payment method
 
@@ -658,12 +667,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.POSTPaymentMethodRequest() # POSTPaymentMethodRequest | 
+request = zuora_client.POSTPaymentMethodRequest() # POSTPaymentMethodRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create payment method
-    api_response = api_instance.p_ost_payment_methods(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_payment_methods(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ost_payment_methods: %s\n" % e)
@@ -673,7 +682,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTPaymentMethodRequest**](POSTPaymentMethodRequest.md)|  | 
+ **request** | [**POSTPaymentMethodRequest**](POSTPaymentMethodRequest.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -687,12 +696,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_payment_methods_credit_card**
-> POSTPaymentMethodResponseType p_ost_payment_methods_credit_card(body, zuora_entity_ids=zuora_entity_ids)
+> POSTPaymentMethodResponseType p_ost_payment_methods_credit_card(request, zuora_entity_ids=zuora_entity_ids)
 
 Create credit card payment method
 
@@ -708,12 +717,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.Object() # Object | 
+request = zuora_client.POSTPaymentMethodType() # POSTPaymentMethodType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create credit card payment method
-    api_response = api_instance.p_ost_payment_methods_credit_card(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_payment_methods_credit_card(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ost_payment_methods_credit_card: %s\n" % e)
@@ -723,7 +732,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
+ **request** | [**POSTPaymentMethodType**](POSTPaymentMethodType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -737,12 +746,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_payment_methods_decryption**
-> POSTPaymentMethodResponseDecryption p_ost_payment_methods_decryption(body, zuora_entity_ids=zuora_entity_ids)
+> POSTPaymentMethodResponseDecryption p_ost_payment_methods_decryption(request, zuora_entity_ids=zuora_entity_ids)
 
 Create Apple Pay payment method
 
@@ -758,12 +767,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.POSTPaymentMethodDecryption() # POSTPaymentMethodDecryption | 
+request = zuora_client.POSTPaymentMethodDecryption() # POSTPaymentMethodDecryption | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create Apple Pay payment method
-    api_response = api_instance.p_ost_payment_methods_decryption(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_payment_methods_decryption(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ost_payment_methods_decryption: %s\n" % e)
@@ -773,7 +782,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTPaymentMethodDecryption**](POSTPaymentMethodDecryption.md)|  | 
+ **request** | [**POSTPaymentMethodDecryption**](POSTPaymentMethodDecryption.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -787,12 +796,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_payment_methods_credit_card**
-> PUTPaymentMethodResponseType p_ut_payment_methods_credit_card(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+> PUTPaymentMethodResponseType p_ut_payment_methods_credit_card(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Update credit card payment method
 
@@ -808,13 +817,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.Object() # Object | 
 payment_method_id = 'payment_method_id_example' # str | Unique ID of the payment method to update.
+request = zuora_client.PUTPaymentMethodType() # PUTPaymentMethodType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update credit card payment method
-    api_response = api_instance.p_ut_payment_methods_credit_card(body, payment_method_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_payment_methods_credit_card(payment_method_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ut_payment_methods_credit_card: %s\n" % e)
@@ -824,8 +833,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **payment_method_id** | **str**| Unique ID of the payment method to update. | 
+ **request** | [**PUTPaymentMethodType**](PUTPaymentMethodType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -839,7 +848,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -888,13 +897,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_verify_payment_methods**
-> PUTVerifyPaymentMethodResponseType p_ut_verify_payment_methods(body, payment_method_id)
+> PUTVerifyPaymentMethodResponseType p_ut_verify_payment_methods(payment_method_id, body)
 
 Verify payment method
 
@@ -910,12 +919,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentMethodsApi()
-body = zuora_client.PUTVerifyPaymentMethodType() # PUTVerifyPaymentMethodType | 
 payment_method_id = 'payment_method_id_example' # str | The ID of the payment method to be verified. 
+body = zuora_client.PUTVerifyPaymentMethodType() # PUTVerifyPaymentMethodType | 
 
 try:
     # Verify payment method
-    api_response = api_instance.p_ut_verify_payment_methods(body, payment_method_id)
+    api_response = api_instance.p_ut_verify_payment_methods(payment_method_id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentMethodsApi->p_ut_verify_payment_methods: %s\n" % e)
@@ -925,8 +934,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTVerifyPaymentMethodType**](PUTVerifyPaymentMethodType.md)|  | 
  **payment_method_id** | **str**| The ID of the payment method to be verified.  | 
+ **body** | [**PUTVerifyPaymentMethodType**](PUTVerifyPaymentMethodType.md)|  | 
 
 ### Return type
 
@@ -939,7 +948,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

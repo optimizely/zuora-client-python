@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **created_by_id** | **str** | The ID of the Zuora user who created the refund.  | [optional] 
 **created_date** | **datetime** | The date and time when the chargeback is created, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format. For example, 2019-03-01 15:31:10.  | [optional] 
 **credit_memo_id** | **str** | The ID of the credit memo that is refunded.  | [optional] 
-**finance_information** | **object** | Container for the finance information related to the refund.  | [optional] 
+**finance_information** | [**POSTRejectPaymentResponseFinanceInformation**](POSTRejectPaymentResponseFinanceInformation.md) |  | [optional] 
 **gateway_id** | **str** | The ID of the gateway instance that processes the payment.  | [optional] 
 **gateway_response** | **str** | The message returned from the payment gateway for the payment. This message is gateway-dependent.  | [optional] 
 **gateway_response_code** | **str** | The code returned from the payment gateway for the payment. This code is gateway-dependent.  | [optional] 
@@ -38,4 +38,5 @@ Name | Type | Description | Notes
 **updated_date** | **datetime** | The date and time when the payment was last updated, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format. For example, 2019-03-02 15:36:10.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

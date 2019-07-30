@@ -1,6 +1,6 @@
 # zuora_client.CreditMemosApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,6 +28,7 @@ Method | HTTP request | Description
 [**p_ut_unapply_credit_memo**](CreditMemosApi.md#p_ut_unapply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/unapply | Unapply credit memo
 [**p_ut_unpost_credit_memo**](CreditMemosApi.md#p_ut_unpost_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/unpost | Unpost credit memo
 [**p_ut_update_credit_memo**](CreditMemosApi.md#p_ut_update_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId} | Update credit memo
+
 
 # **d_elete_credit_memo**
 > CommonResponseType d_elete_credit_memo(credit_memo_id, zuora_entity_ids=zuora_entity_ids)
@@ -74,8 +75,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -124,8 +125,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -174,8 +175,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -228,8 +229,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -282,8 +283,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -307,7 +308,7 @@ api_instance = zuora_client.CreditMemosApi()
 partid = 'partid_example' # str | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). . 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # Get credit memo part items
@@ -324,7 +325,7 @@ Name | Type | Description  | Notes
  **partid** | **str**| The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). .  | 
  **credit_memo_id** | **str**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -336,8 +337,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -360,7 +361,7 @@ from pprint import pprint
 api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 zuora_version = 'zuora_version_example' # str |  The minor version of the Zuora REST API. See [Minor Version](https://www.zuora.com/developer/api-reference/#section/API-Versions/Minor-Version) for information about REST API version control.   This header affects the availability of the following fields: * creditTaxItems * taxationItems  (optional)
 amount = 1.2 # float | This parameter filters the response based on the `amount` field.   (optional)
 applied_amount = 1.2 # float | This parameter filters the response based on the `appliedAmount` field.   (optional)
@@ -392,7 +393,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **str**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **zuora_version** | **str**|  The minor version of the Zuora REST API. See [Minor Version](https://www.zuora.com/developer/api-reference/#section/API-Versions/Minor-Version) for information about REST API version control.   This header affects the availability of the following fields: * creditTaxItems * taxationItems  | [optional] 
  **amount** | **float**| This parameter filters the response based on the &#x60;amount&#x60; field.   | [optional] 
  **applied_amount** | **float**| This parameter filters the response based on the &#x60;appliedAmount&#x60; field.   | [optional] 
@@ -420,8 +421,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -472,8 +473,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -496,7 +497,7 @@ from pprint import pprint
 api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # Get credit memo parts
@@ -512,7 +513,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **str**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -524,8 +525,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -547,7 +548,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.CreditMemosApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 account_id = 'account_id_example' # str | This parameter filters the response based on the `accountId` field.   (optional)
 amount = 1.2 # float | This parameter filters the response based on the `amount` field.   (optional)
 applied_amount = 1.2 # float | This parameter filters the response based on the `appliedAmount` field.   (optional)
@@ -583,7 +584,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **account_id** | **str**| This parameter filters the response based on the &#x60;accountId&#x60; field.   | [optional] 
  **amount** | **float**| This parameter filters the response based on the &#x60;amount&#x60; field.   | [optional] 
  **applied_amount** | **float**| This parameter filters the response based on the &#x60;appliedAmount&#x60; field.   | [optional] 
@@ -616,8 +617,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -641,8 +642,8 @@ api_instance = zuora_client.CreditMemosApi()
 cmitemid = 'cmitemid_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
-page = 56 # int | Page number.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
+page = 1 # int | Page number.  (optional) (default to 1)
 
 try:
     # Get taxation items of credit memo item
@@ -659,8 +660,8 @@ Name | Type | Description  | Notes
  **cmitemid** | **str**| The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).  | 
  **credit_memo_id** | **str**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
- **page** | **int**| Page number.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
+ **page** | **int**| Page number.  | [optional] [default to 1]
 
 ### Return type
 
@@ -672,8 +673,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -725,7 +726,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -774,13 +775,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_email_credit_memo**
-> CommonResponseType p_ost_email_credit_memo(body, credit_memo_id, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ost_email_credit_memo(request, credit_memo_id, zuora_entity_ids=zuora_entity_ids)
 
 Email credit memo
 
@@ -796,13 +797,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.CreditMemosApi()
-body = zuora_client.PostCreditMemoEmailRequestType() # PostCreditMemoEmailRequestType | 
+request = zuora_client.PostCreditMemoEmailRequestType() # PostCreditMemoEmailRequestType | 
 credit_memo_id = 'credit_memo_id_example' # str | The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Email credit memo
-    api_response = api_instance.p_ost_email_credit_memo(body, credit_memo_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_email_credit_memo(request, credit_memo_id, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CreditMemosApi->p_ost_email_credit_memo: %s\n" % e)
@@ -812,7 +813,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostCreditMemoEmailRequestType**](PostCreditMemoEmailRequestType.md)|  | 
+ **request** | [**PostCreditMemoEmailRequestType**](PostCreditMemoEmailRequestType.md)|  | 
  **credit_memo_id** | **str**| The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
@@ -827,7 +828,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -879,7 +880,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -929,12 +930,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_upload_file_for_credit_memo**
-> POSTUploadFileResponse p_ost_upload_file_for_credit_memo(credit_memo_id, file=file, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+> POSTUploadFileResponse p_ost_upload_file_for_credit_memo(credit_memo_id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, file=file)
 
 Upload file for credit memo
 
@@ -951,13 +952,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.CreditMemosApi()
 credit_memo_id = 'credit_memo_id_example' # str | The ID of the credit memo that you want to upload a PDF file for. For example, 402890555a7e9791015a879f064a0054. 
-file = 'file_example' # file |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
+file = '/path/to/file.txt' # file | The PDF file to upload for the credit memo.  (optional)
 
 try:
     # Upload file for credit memo
-    api_response = api_instance.p_ost_upload_file_for_credit_memo(credit_memo_id, file=file, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+    api_response = api_instance.p_ost_upload_file_for_credit_memo(credit_memo_id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, file=file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CreditMemosApi->p_ost_upload_file_for_credit_memo: %s\n" % e)
@@ -968,9 +969,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **str**| The ID of the credit memo that you want to upload a PDF file for. For example, 402890555a7e9791015a879f064a0054.  | 
- **file** | **file**|  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
+ **file** | **file**| The PDF file to upload for the credit memo.  | [optional] 
 
 ### Return type
 
@@ -983,12 +984,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostcm_taxation_items**
-> GETTaxationItemListType p_ostcm_taxation_items(body, credit_memo_id, zuora_entity_ids=zuora_entity_ids)
+> GETTaxationItemListType p_ostcm_taxation_items(credit_memo_id, body, zuora_entity_ids=zuora_entity_ids)
 
 Create taxation items for credit memo
 
@@ -1004,13 +1005,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.CreditMemosApi()
-body = zuora_client.POSTTaxationItemListForCMType() # POSTTaxationItemListForCMType | 
 credit_memo_id = 'credit_memo_id_example' # str | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+body = zuora_client.POSTTaxationItemListForCMType() # POSTTaxationItemListForCMType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create taxation items for credit memo
-    api_response = api_instance.p_ostcm_taxation_items(body, credit_memo_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostcm_taxation_items(credit_memo_id, body, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CreditMemosApi->p_ostcm_taxation_items: %s\n" % e)
@@ -1020,8 +1021,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTTaxationItemListForCMType**](POSTTaxationItemListForCMType.md)|  | 
  **credit_memo_id** | **str**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
+ **body** | [**POSTTaxationItemListForCMType**](POSTTaxationItemListForCMType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -1035,7 +1036,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1087,7 +1088,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1136,8 +1137,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1186,8 +1187,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1239,7 +1240,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1288,8 +1289,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1341,7 +1342,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

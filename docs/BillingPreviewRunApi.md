@@ -1,11 +1,12 @@
 # zuora_client.BillingPreviewRunApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**g_et_billing_preview_run**](BillingPreviewRunApi.md#g_et_billing_preview_run) | **GET** /v1/billing-preview-runs/{billingPreviewRunId} | Get Billing Preview Run
 [**p_ost_billing_preview_run**](BillingPreviewRunApi.md#p_ost_billing_preview_run) | **POST** /v1/billing-preview-runs | Create Billing Preview Run
+
 
 # **g_et_billing_preview_run**
 > GetBillingPreviewRunResponse g_et_billing_preview_run(billing_preview_run_id, zuora_entity_ids=zuora_entity_ids)
@@ -52,13 +53,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_billing_preview_run**
-> object p_ost_billing_preview_run(body, zuora_entity_ids=zuora_entity_ids)
+> InlineResponse200 p_ost_billing_preview_run(request, zuora_entity_ids=zuora_entity_ids)
 
 Create Billing Preview Run
 
@@ -74,12 +75,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.BillingPreviewRunApi()
-body = zuora_client.PostBillingPreviewRunParam() # PostBillingPreviewRunParam | 
+request = zuora_client.PostBillingPreviewRunParam() # PostBillingPreviewRunParam | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create Billing Preview Run
-    api_response = api_instance.p_ost_billing_preview_run(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_billing_preview_run(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BillingPreviewRunApi->p_ost_billing_preview_run: %s\n" % e)
@@ -89,12 +90,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostBillingPreviewRunParam**](PostBillingPreviewRunParam.md)|  | 
+ **request** | [**PostBillingPreviewRunParam**](PostBillingPreviewRunParam.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
-**object**
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -103,7 +104,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

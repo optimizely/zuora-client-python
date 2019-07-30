@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **credit_balance_amount** | **float** | The amount that the payment transfers to the credit balance. The value is not &#x60;0&#x60; only for those payments that come from legacy payment operations performed without the Invoice Settlement feature.  | [optional] 
 **currency** | **str** | A currency defined in the web-based UI administrative settings.  | [optional] 
 **effective_date** | **datetime** | The date and time when the payment takes effect, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format.  | [optional] 
-**finance_information** | **object** | Container for the finance information related to the refund.  | [optional] 
+**finance_information** | [**POSTRejectPaymentResponseFinanceInformation**](POSTRejectPaymentResponseFinanceInformation.md) |  | [optional] 
 **gateway_id** | **str** | The ID of the gateway instance that processes the payment.  | [optional] 
 **gateway_order_id** | **str** | A merchant-specified natural key value that can be passed to the electronic payment gateway when a payment is created. If not specified, the payment number will be passed in instead.  | [optional] 
 **gateway_response** | **str** | The message returned from the payment gateway for the payment. This message is gateway-dependent.  | [optional] 
@@ -41,4 +41,5 @@ Name | Type | Description | Notes
 **updated_date** | **datetime** | The date and time when the payment was last updated, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format. For example, 2019-03-02 15:36:10.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

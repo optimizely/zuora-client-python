@@ -1,10 +1,11 @@
 # zuora_client.GetFilesApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**g_et_files**](GetFilesApi.md#g_et_files) | **GET** /v1/files/{file-id} | Get files
+
 
 # **g_et_files**
 > g_et_files(file_id, zuora_entity_ids=zuora_entity_ids)
@@ -50,8 +51,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

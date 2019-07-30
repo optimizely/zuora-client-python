@@ -1,10 +1,11 @@
 # zuora_client.DescribeApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**g_et_describe**](DescribeApi.md#g_et_describe) | **GET** /v1/describe/{object} | Describe object
+
 
 # **g_et_describe**
 > str g_et_describe(object, zuora_entity_ids=zuora_entity_ids)
@@ -51,7 +52,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: text/xml; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

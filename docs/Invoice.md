@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **comments** | **str** |  Additional information related to the invoice that a Zuora user added to the invoice.   **Character limit**: 255  **Values:** a string of 255 characters or fewer  | [optional] 
 **created_by_id** | **str** |  The user ID of the person who created the invoice. If a bill run generated the invoice, then the value is the user ID of person who created the bill run.   **Character limit**: 32  **Values**: automatically generated  | [optional] 
 **created_date** | **datetime** |  The date when the invoice was generated.   **Character limit**: 29  **Values**: automatically generated  | [optional] 
-**credit_balance_adjustment_amount** | **float** |  The currency amount of the adjustment applied to the customer&#x27;s credit balance.   **Character limit**: 16  **Values**: a valid currency amount This field is only available if the [Zuora Global Support](http://support.zuora.com/) to enable this feature.    | [optional] 
+**credit_balance_adjustment_amount** | **float** |  The currency amount of the adjustment applied to the customer&#39;s credit balance.   **Character limit**: 16  **Values**: a valid currency amount This field is only available if the [Zuora Global Support](http://support.zuora.com/) to enable this feature.    | [optional] 
 **due_date** | **date** |  The date by which the payment for this invoice is due.   **Character limit**: 29  | [optional] 
 **includes_one_time** | **bool** |  Specifies whether the invoice includes one-time charges.   **Character limit**: 5  **Values**: automatically generated from one of the following: &#x60;True&#x60; (default), &#x60;False&#x60;  | [optional] 
 **includes_recurring** | **bool** |  Specifies whether the invoice includes recurring charges.   **Character limit**: 5  **Values**: automatically generated from one of the following: &#x60;True&#x60; (default), &#x60;False&#x60;  | [optional] 
@@ -35,4 +35,5 @@ Name | Type | Description | Notes
 **updated_date** | **datetime** |  The date when the invoice was last updated.   **Character limit**: 29  **Values**: automatically generated  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

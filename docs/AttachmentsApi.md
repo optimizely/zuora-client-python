@@ -1,6 +1,6 @@
 # zuora_client.AttachmentsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**g_et_attachments_list**](AttachmentsApi.md#g_et_attachments_list) | **GET** /v1/attachments/{object-type}/{object-key} | View attachments list
 [**p_ost_attachments**](AttachmentsApi.md#p_ost_attachments) | **POST** /v1/attachments | Add attachments
 [**p_ut_attachments**](AttachmentsApi.md#p_ut_attachments) | **PUT** /v1/attachments/{attachment-id} | Edit attachments
+
 
 # **d_elete_attachments**
 > CommonResponseType d_elete_attachments(attachment_id, zuora_entity_ids=zuora_entity_ids)
@@ -55,8 +56,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -105,8 +106,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -130,7 +131,7 @@ api_instance = zuora_client.AttachmentsApi()
 object_type = 'object_type_example' # str | The type of object to list attachements for. 
 object_key = 'object_key_example' # str | ID of the object to list attachements for.  - If `object-type` is `account`, specify an account ID.  - If `object-type` is `invoice`, specify an invoice ID.  - If `object-type` is `subscription`, specify a subscription number. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # View attachments list
@@ -147,7 +148,7 @@ Name | Type | Description  | Notes
  **object_type** | **str**| The type of object to list attachements for.  | 
  **object_key** | **str**| ID of the object to list attachements for.  - If &#x60;object-type&#x60; is &#x60;account&#x60;, specify an account ID.  - If &#x60;object-type&#x60; is &#x60;invoice&#x60;, specify an invoice ID.  - If &#x60;object-type&#x60; is &#x60;subscription&#x60;, specify a subscription number.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -159,13 +160,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_attachments**
-> POSTAttachmentResponseType p_ost_attachments(file, associated_object_type, associated_object_key, zuora_entity_ids=zuora_entity_ids, description=description)
+> POSTAttachmentResponseType p_ost_attachments(associated_object_type, associated_object_key, file, zuora_entity_ids=zuora_entity_ids, description=description)
 
 Add attachments
 
@@ -181,15 +182,15 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.AttachmentsApi()
-file = 'file_example' # file | 
 associated_object_type = 'associated_object_type_example' # str | Specify one of the following values: Account, Subscription, or Invoice. 
 associated_object_key = 'associated_object_key_example' # str | For the Subscription type, specify the Subscription Number. An attachment is tied to the Subscription Number and thus viewable with every subscription version.  For Account and Invoice, specify the id. 
+file = '/path/to/file.txt' # file | The file to be attached. Files with the following extensions are supported: .pdf, .csv, .png, .xlsx, .xls, .doc, .docx, .msg, .jpg, .txt, .htm, .html, .eml, .pptx, .gif, .rtf, .xml, .jpeg, .log, .cls  The maximum file size is 4 MB. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 description = 'description_example' # str | Description of the attachment document.  (optional)
 
 try:
     # Add attachments
-    api_response = api_instance.p_ost_attachments(file, associated_object_type, associated_object_key, zuora_entity_ids=zuora_entity_ids, description=description)
+    api_response = api_instance.p_ost_attachments(associated_object_type, associated_object_key, file, zuora_entity_ids=zuora_entity_ids, description=description)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AttachmentsApi->p_ost_attachments: %s\n" % e)
@@ -199,9 +200,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **file**|  | 
  **associated_object_type** | **str**| Specify one of the following values: Account, Subscription, or Invoice.  | 
  **associated_object_key** | **str**| For the Subscription type, specify the Subscription Number. An attachment is tied to the Subscription Number and thus viewable with every subscription version.  For Account and Invoice, specify the id.  | 
+ **file** | **file**| The file to be attached. Files with the following extensions are supported: .pdf, .csv, .png, .xlsx, .xls, .doc, .docx, .msg, .jpg, .txt, .htm, .html, .eml, .pptx, .gif, .rtf, .xml, .jpeg, .log, .cls  The maximum file size is 4 MB.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **description** | **str**| Description of the attachment document.  | [optional] 
 
@@ -216,12 +217,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_attachments**
-> CommonResponseType p_ut_attachments(attachment_id, body=body, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ut_attachments(attachment_id, zuora_entity_ids=zuora_entity_ids, request=request)
 
 Edit attachments
 
@@ -238,12 +239,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.AttachmentsApi()
 attachment_id = 'attachment_id_example' # str | Id of the attachment to be updated.
-body = zuora_client.PUTAttachmentType() # PUTAttachmentType |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
+request = zuora_client.PUTAttachmentType() # PUTAttachmentType |  (optional)
 
 try:
     # Edit attachments
-    api_response = api_instance.p_ut_attachments(attachment_id, body=body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_attachments(attachment_id, zuora_entity_ids=zuora_entity_ids, request=request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AttachmentsApi->p_ut_attachments: %s\n" % e)
@@ -254,8 +255,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **attachment_id** | **str**| Id of the attachment to be updated. | 
- **body** | [**PUTAttachmentType**](PUTAttachmentType.md)|  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+ **request** | [**PUTAttachmentType**](PUTAttachmentType.md)|  | [optional] 
 
 ### Return type
 
@@ -268,7 +269,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

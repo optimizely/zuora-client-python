@@ -1,6 +1,6 @@
 # zuora_client.EntityConnectionsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**p_ut_entity_connections_accept**](EntityConnectionsApi.md#p_ut_entity_connections_accept) | **PUT** /v1/entity-connections/{connection-id}/accept | Multi-entity: Accept connection
 [**p_ut_entity_connections_deny**](EntityConnectionsApi.md#p_ut_entity_connections_deny) | **PUT** /v1/entity-connections/{connection-id}/deny | Multi-entity: Deny connection
 [**p_ut_entity_connections_disconnect**](EntityConnectionsApi.md#p_ut_entity_connections_disconnect) | **PUT** /v1/entity-connections/{connection-id}/disconnect | Multi-entity: Disconnect connection
+
 
 # **g_et_entity_connections**
 > GETEntityConnectionsResponseType g_et_entity_connections(zuora_entity_ids=zuora_entity_ids, page_size=page_size, type=type)
@@ -28,7 +29,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.EntityConnectionsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 30 # int | Number of rows returned per page.  (optional) (default to 30)
 type = 'type_example' # str | Specifies whether to retrieve inbound or outbound connections for an entity.  Possible values:  - `inbound`: All the incoming connections to the entity.  - `outbound`: All the outgoing connections from the entity.  If you do not specify this field in the request, both the inbound and outbound connections are returned.  (optional)
 
 try:
@@ -44,7 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 30]
  **type** | **str**| Specifies whether to retrieve inbound or outbound connections for an entity.  Possible values:  - &#x60;inbound&#x60;: All the incoming connections to the entity.  - &#x60;outbound&#x60;: All the outgoing connections from the entity.  If you do not specify this field in the request, both the inbound and outbound connections are returned.  | [optional] 
 
 ### Return type
@@ -57,13 +58,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_entity_connections**
-> POSTEntityConnectionsResponseType p_ost_entity_connections(body=body, zuora_entity_ids=zuora_entity_ids)
+> POSTEntityConnectionsResponseType p_ost_entity_connections(zuora_entity_ids=zuora_entity_ids, request=request)
 
 Multi-entity: Initiate connection
 
@@ -79,12 +80,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.EntityConnectionsApi()
-body = zuora_client.POSTEntityConnectionsType() # POSTEntityConnectionsType |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
+request = zuora_client.POSTEntityConnectionsType() # POSTEntityConnectionsType |  (optional)
 
 try:
     # Multi-entity: Initiate connection
-    api_response = api_instance.p_ost_entity_connections(body=body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_entity_connections(zuora_entity_ids=zuora_entity_ids, request=request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntityConnectionsApi->p_ost_entity_connections: %s\n" % e)
@@ -94,8 +95,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTEntityConnectionsType**](POSTEntityConnectionsType.md)|  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+ **request** | [**POSTEntityConnectionsType**](POSTEntityConnectionsType.md)|  | [optional] 
 
 ### Return type
 
@@ -108,7 +109,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -157,8 +158,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -207,8 +208,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -257,8 +258,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

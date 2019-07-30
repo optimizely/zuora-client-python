@@ -1,14 +1,15 @@
 # zuora_client.RSASignaturesApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**p_ost_decrypt_rsa_signatures**](RSASignaturesApi.md#p_ost_decrypt_rsa_signatures) | **POST** /v1/rsa-signatures/decrypt | Decrypt RSA signature
 [**p_ostrsa_signatures**](RSASignaturesApi.md#p_ostrsa_signatures) | **POST** /v1/rsa-signatures | Generate RSA signature
 
+
 # **p_ost_decrypt_rsa_signatures**
-> POSTDecryptResponseType p_ost_decrypt_rsa_signatures(body, zuora_entity_ids=zuora_entity_ids)
+> POSTDecryptResponseType p_ost_decrypt_rsa_signatures(request, zuora_entity_ids=zuora_entity_ids)
 
 Decrypt RSA signature
 
@@ -24,12 +25,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RSASignaturesApi()
-body = zuora_client.POSTDecryptionType() # POSTDecryptionType | 
+request = zuora_client.POSTDecryptionType() # POSTDecryptionType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Decrypt RSA signature
-    api_response = api_instance.p_ost_decrypt_rsa_signatures(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_decrypt_rsa_signatures(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RSASignaturesApi->p_ost_decrypt_rsa_signatures: %s\n" % e)
@@ -39,7 +40,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTDecryptionType**](POSTDecryptionType.md)|  | 
+ **request** | [**POSTDecryptionType**](POSTDecryptionType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -53,12 +54,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostrsa_signatures**
-> POSTRSASignatureResponseType p_ostrsa_signatures(body, zuora_entity_ids=zuora_entity_ids)
+> POSTRSASignatureResponseType p_ostrsa_signatures(request, zuora_entity_ids=zuora_entity_ids)
 
 Generate RSA signature
 
@@ -74,12 +75,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RSASignaturesApi()
-body = zuora_client.POSTRSASignatureType() # POSTRSASignatureType | 
+request = zuora_client.POSTRSASignatureType() # POSTRSASignatureType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Generate RSA signature
-    api_response = api_instance.p_ostrsa_signatures(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostrsa_signatures(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RSASignaturesApi->p_ostrsa_signatures: %s\n" % e)
@@ -89,7 +90,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTRSASignatureType**](POSTRSASignatureType.md)|  | 
+ **request** | [**POSTRSASignatureType**](POSTRSASignatureType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -103,7 +104,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

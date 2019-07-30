@@ -1,6 +1,6 @@
 # zuora_client.OrdersApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**p_ut_order_trigger_dates**](OrdersApi.md#p_ut_order_trigger_dates) | **PUT** /v1/orders/{orderNumber}/triggerDates | Update order action trigger dates
 [**p_ut_update_order_custom_fields**](OrdersApi.md#p_ut_update_order_custom_fields) | **PUT** /v1/orders/{orderNumber}/customFields | Update order custom fields
 [**p_ut_update_subscription_custom_fields**](OrdersApi.md#p_ut_update_subscription_custom_fields) | **PUT** /v1/subscriptions/{subscriptionNumber}/customFields | Update subscription custom fields
+
 
 # **d_elete_order**
 > CommonResponseType d_elete_order(order_number, zuora_entity_ids=zuora_entity_ids)
@@ -70,8 +71,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -93,8 +94,8 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.OrdersApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page = 56 # int | The page number of the orders retrieved.   (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page = 1 # int | The page number of the orders retrieved.   (optional) (default to 1)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 date_filter_option = 'date_filter_option_example' # str | The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate.  (optional)
 start_date = '2013-10-20' # date | The result will only contain the orders with the date of dateFilterOption later than or equal to this date.  (optional)
 end_date = '2013-10-20' # date | The result will only contains orders with the date of dateFilterOption earlier than or equal to this date.  (optional)
@@ -112,8 +113,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page** | **int**| The page number of the orders retrieved.   | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page** | **int**| The page number of the orders retrieved.   | [optional] [default to 1]
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **date_filter_option** | **str**| The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate.  | [optional] 
  **start_date** | **date**| The result will only contain the orders with the date of dateFilterOption later than or equal to this date.  | [optional] 
  **end_date** | **date**| The result will only contains orders with the date of dateFilterOption earlier than or equal to this date.  | [optional] 
@@ -128,8 +129,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -178,13 +179,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **g_et_job_status_and_response**
-> object g_et_job_status_and_response(job_id)
+> InlineResponse2004 g_et_job_status_and_response(job_id)
 
 Get job status and response
 
@@ -218,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -226,8 +227,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -276,8 +277,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -328,8 +329,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -384,8 +385,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -434,8 +435,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -459,7 +460,7 @@ api_instance = zuora_client.OrdersApi()
 account_number = 'account_number_example' # str | The invoice owner account number.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page = 56 # int | The page number of the orders retrieved. The default is 1.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 date_filter_option = 'date_filter_option_example' # str | The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate.  (optional)
 start_date = '2013-10-20' # date | The result will only contain the orders with the date of dateFilterOption later than or equal to this date.  (optional)
 end_date = '2013-10-20' # date | The result will only contain the orders with the date of dateFilterOption earlier than or equal to this date.  (optional)
@@ -479,7 +480,7 @@ Name | Type | Description  | Notes
  **account_number** | **str**| The invoice owner account number. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page** | **int**| The page number of the orders retrieved. The default is 1.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **date_filter_option** | **str**| The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate.  | [optional] 
  **start_date** | **date**| The result will only contain the orders with the date of dateFilterOption later than or equal to this date.  | [optional] 
  **end_date** | **date**| The result will only contain the orders with the date of dateFilterOption earlier than or equal to this date.  | [optional] 
@@ -494,8 +495,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -519,7 +520,7 @@ api_instance = zuora_client.OrdersApi()
 subscription_number = 'subscription_number_example' # str | The subscription number.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page = 56 # int | The page number of the orders retrieved. The default is '1'.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 date_filter_option = 'date_filter_option_example' # str | The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate.  (optional)
 start_date = '2013-10-20' # date | The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date.  (optional)
 end_date = '2013-10-20' # date | The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date.  (optional)
@@ -538,11 +539,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_number** | **str**| The subscription number. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page** | **int**| The page number of the orders retrieved. The default is &#x27;1&#x27;.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
- **date_filter_option** | **str**| The date type to filter on. This field value can be &#x27;orderDate&#x27; or &#x27;updatedDate&#x27;. Default is orderDate.  | [optional] 
- **start_date** | **date**| The result will only contain the orders with the date of &#x27;dateFilterOption&#x27; later than or equal to this date.  | [optional] 
- **end_date** | **date**| The result will only contain the orders with the date of &#x27;dateFilterOption&#x27; earlier than or equal to this date.  | [optional] 
+ **page** | **int**| The page number of the orders retrieved. The default is &#39;1&#39;.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
+ **date_filter_option** | **str**| The date type to filter on. This field value can be &#39;orderDate&#39; or &#39;updatedDate&#39;. Default is orderDate.  | [optional] 
+ **start_date** | **date**| The result will only contain the orders with the date of &#39;dateFilterOption&#39; later than or equal to this date.  | [optional] 
+ **end_date** | **date**| The result will only contain the orders with the date of &#39;dateFilterOption&#39; earlier than or equal to this date.  | [optional] 
 
 ### Return type
 
@@ -554,8 +555,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -579,7 +580,7 @@ api_instance = zuora_client.OrdersApi()
 account_number = 'account_number_example' # str | The subscription owner account number.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 page = 56 # int | The page number of the orders retrieved. The default is 1.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 date_filter_option = 'date_filter_option_example' # str | The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate.  (optional)
 start_date = '2013-10-20' # date | The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date.  (optional)
 end_date = '2013-10-20' # date | The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date.  (optional)
@@ -599,10 +600,10 @@ Name | Type | Description  | Notes
  **account_number** | **str**| The subscription owner account number. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page** | **int**| The page number of the orders retrieved. The default is 1.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
- **date_filter_option** | **str**| The date type to filter on. This field value can be &#x27;orderDate&#x27; or &#x27;updatedDate&#x27;. Default is orderDate.  | [optional] 
- **start_date** | **date**| The result will only contain the orders with the date of &#x27;dateFilterOption&#x27; later than or equal to this date.  | [optional] 
- **end_date** | **date**| The result will only contain the orders with the date of &#x27;dateFilterOption&#x27; earlier than or equal to this date.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
+ **date_filter_option** | **str**| The date type to filter on. This field value can be &#39;orderDate&#39; or &#39;updatedDate&#39;. Default is orderDate.  | [optional] 
+ **start_date** | **date**| The result will only contain the orders with the date of &#39;dateFilterOption&#39; later than or equal to this date.  | [optional] 
+ **end_date** | **date**| The result will only contain the orders with the date of &#39;dateFilterOption&#39; earlier than or equal to this date.  | [optional] 
 
 ### Return type
 
@@ -614,8 +615,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -639,8 +640,8 @@ api_instance = zuora_client.OrdersApi()
 subscription_number = 'subscription_number_example' # str | The number of the subscription to retrieve terms for. For example, A-S00000001. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 version = 56 # int | The version of the subscription to retrieve terms for. If you do not specify this parameter, Zuora returns the terms for the latest version of the subscription.  (optional)
-page = 56 # int | The page number of the terms retrieved.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page = 1 # int | The page number of the terms retrieved.  (optional) (default to 1)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # Get term information for subscription
@@ -657,8 +658,8 @@ Name | Type | Description  | Notes
  **subscription_number** | **str**| The number of the subscription to retrieve terms for. For example, A-S00000001.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **version** | **int**| The version of the subscription to retrieve terms for. If you do not specify this parameter, Zuora returns the terms for the latest version of the subscription.  | [optional] 
- **page** | **int**| The page number of the terms retrieved.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page** | **int**| The page number of the terms retrieved.  | [optional] [default to 1]
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -670,13 +671,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_create_order_asynchronously**
-> object p_ost_create_order_asynchronously(body, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> InlineResponse202 p_ost_create_order_asynchronously(body, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Create order asynchronously
 
@@ -714,7 +715,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
@@ -723,7 +724,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -775,7 +776,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -825,12 +826,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_preview_order_asynchronously**
-> object p_ost_preview_order_asynchronously(body, zuora_entity_ids=zuora_entity_ids)
+> InlineResponse202 p_ost_preview_order_asynchronously(body, zuora_entity_ids=zuora_entity_ids)
 
 Preview order asynchronously
 
@@ -866,7 +867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 
@@ -875,7 +876,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -925,12 +926,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_order_trigger_dates**
-> PUTOrderTriggerDatesResponseType p_ut_order_trigger_dates(body, order_number, zuora_entity_ids=zuora_entity_ids)
+> PUTOrderTriggerDatesResponseType p_ut_order_trigger_dates(order_number, body, zuora_entity_ids=zuora_entity_ids)
 
 Update order action trigger dates
 
@@ -946,13 +947,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.OrdersApi()
-body = zuora_client.PUTOrderActionTriggerDatesRequestType() # PUTOrderActionTriggerDatesRequestType | 
 order_number = 'order_number_example' # str | Order number of a pending order in which you are to update a `CreateSubscription` order action's triggering dates.
+body = zuora_client.PUTOrderActionTriggerDatesRequestType() # PUTOrderActionTriggerDatesRequestType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update order action trigger dates
-    api_response = api_instance.p_ut_order_trigger_dates(body, order_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_order_trigger_dates(order_number, body, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrdersApi->p_ut_order_trigger_dates: %s\n" % e)
@@ -962,8 +963,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **order_number** | **str**| Order number of a pending order in which you are to update a &#x60;CreateSubscription&#x60; order action&#39;s triggering dates. | 
  **body** | [**PUTOrderActionTriggerDatesRequestType**](PUTOrderActionTriggerDatesRequestType.md)|  | 
- **order_number** | **str**| Order number of a pending order in which you are to update a &#x60;CreateSubscription&#x60; order action&#x27;s triggering dates. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -977,12 +978,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_update_order_custom_fields**
-> CommonResponseType p_ut_update_order_custom_fields(body, order_number, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ut_update_order_custom_fields(order_number, body, zuora_entity_ids=zuora_entity_ids)
 
 Update order custom fields
 
@@ -998,13 +999,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.OrdersApi()
-body = zuora_client.PUTOrderPatchRequestType() # PUTOrderPatchRequestType | 
 order_number = 'order_number_example' # str | The order number.
+body = zuora_client.PUTOrderPatchRequestType() # PUTOrderPatchRequestType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update order custom fields
-    api_response = api_instance.p_ut_update_order_custom_fields(body, order_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_update_order_custom_fields(order_number, body, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrdersApi->p_ut_update_order_custom_fields: %s\n" % e)
@@ -1014,8 +1015,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTOrderPatchRequestType**](PUTOrderPatchRequestType.md)|  | 
  **order_number** | **str**| The order number. | 
+ **body** | [**PUTOrderPatchRequestType**](PUTOrderPatchRequestType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -1029,12 +1030,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_update_subscription_custom_fields**
-> CommonResponseType p_ut_update_subscription_custom_fields(body, subscription_number, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ut_update_subscription_custom_fields(subscription_number, body, zuora_entity_ids=zuora_entity_ids)
 
 Update subscription custom fields
 
@@ -1050,13 +1051,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.OrdersApi()
-body = zuora_client.PUTSubscriptionPatchRequestType() # PUTSubscriptionPatchRequestType | 
 subscription_number = 'subscription_number_example' # str | The subscription number to be updated.
+body = zuora_client.PUTSubscriptionPatchRequestType() # PUTSubscriptionPatchRequestType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update subscription custom fields
-    api_response = api_instance.p_ut_update_subscription_custom_fields(body, subscription_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_update_subscription_custom_fields(subscription_number, body, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrdersApi->p_ut_update_subscription_custom_fields: %s\n" % e)
@@ -1066,8 +1067,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTSubscriptionPatchRequestType**](PUTSubscriptionPatchRequestType.md)|  | 
  **subscription_number** | **str**| The subscription number to be updated. | 
+ **body** | [**PUTSubscriptionPatchRequestType**](PUTSubscriptionPatchRequestType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -1081,7 +1082,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

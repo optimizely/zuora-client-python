@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **applied_to_item_id** | **str** | The unique ID of the invoice item that the discount charge is applied to.  | [optional] 
-**charge_amount** | **str** | The amount of the charge. This amount doesn&#x27;t include taxes regardless if the charge&#x27;s tax mode is inclusive or exclusive.  | [optional] 
+**charge_amount** | **str** | The amount of the charge. This amount doesn&#39;t include taxes regardless if the charge&#39;s tax mode is inclusive or exclusive.  | [optional] 
 **charge_date** | **datetime** | The date when the invoice item was created.  | [optional] 
 **charge_description** | **str** | Description of the charge.  | [optional] 
 **charge_id** | **str** | Id of the charge.  | [optional] 
@@ -24,4 +24,5 @@ Name | Type | Description | Notes
 **unit_of_measure** | **str** | Unit used to measure consumption.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

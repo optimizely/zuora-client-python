@@ -1,6 +1,6 @@
 # zuora_client.RevenueSchedulesApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**p_ut_revenue_by_recognition_startand_end_dates**](RevenueSchedulesApi.md#p_ut_revenue_by_recognition_startand_end_dates) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range | Distribute revenue by recognition start and end dates
 [**p_ut_revenue_specific_date**](RevenueSchedulesApi.md#p_ut_revenue_specific_date) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date | Distribute revenue on specific date
 [**p_utrs_basic_info**](RevenueSchedulesApi.md#p_utrs_basic_info) | **PUT** /v1/revenue-schedules/{rs-number}/basic-information | Update revenue schedule basic information
+
 
 # **d_eleters**
 > CommonResponseType d_eleters(rs_number, zuora_entity_ids=zuora_entity_ids)
@@ -71,8 +72,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -119,8 +120,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -167,8 +168,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -217,8 +218,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -267,8 +268,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -291,7 +292,7 @@ from pprint import pprint
 api_instance = zuora_client.RevenueSchedulesApi()
 account_key = 'account_key_example' # str | The account number or account ID. 
 charge_key = 'charge_key_example' # str | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 8 # int | Number of rows returned per page.  (optional) (default to 8)
 
 try:
     # Get all revenue schedules of product charge by charge ID and billing account ID 
@@ -307,7 +308,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_key** | **str**| The account number or account ID.  | 
  **charge_key** | **str**| The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82.  | 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 8]
 
 ### Return type
 
@@ -319,8 +320,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -343,7 +344,7 @@ from pprint import pprint
 api_instance = zuora_client.RevenueSchedulesApi()
 charge_key = 'charge_key_example' # str | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 8 # int | Number of rows returned per page.  (optional) (default to 8)
 
 try:
     # Get revenue schedule by subscription charge
@@ -359,7 +360,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **charge_key** | **str**| ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 8]
 
 ### Return type
 
@@ -371,8 +372,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -421,13 +422,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_credit_memo_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_distribute_by_date_range(body, cmi_id)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
 
 Create revenue schedule for credit memo item (distribute by date range) 
 
@@ -443,12 +444,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 cmi_id = 'cmi_id_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
+body = zuora_client.POSTRevenueScheduleByTransactionRatablyCMType() # POSTRevenueScheduleByTransactionRatablyCMType | 
 
 try:
     # Create revenue schedule for credit memo item (distribute by date range) 
-    api_response = api_instance.p_ostr_sfor_credit_memo_item_distribute_by_date_range(body, cmi_id)
+    api_response = api_instance.p_ostr_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_credit_memo_item_distribute_by_date_range: %s\n" % e)
@@ -458,8 +459,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **cmi_id** | **str**| The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).  | 
+ **body** | [**POSTRevenueScheduleByTransactionRatablyCMType**](POSTRevenueScheduleByTransactionRatablyCMType.md)|  | 
 
 ### Return type
 
@@ -472,12 +473,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_credit_memo_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_manual_distribution(body, cmi_id)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_manual_distribution(cmi_id, body)
 
 Create revenue schedule for credit memo item (manual distribution) 
 
@@ -493,12 +494,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 cmi_id = 'cmi_id_example' # str | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
+body = zuora_client.POSTRevenueScheduleByTransactionType() # POSTRevenueScheduleByTransactionType | 
 
 try:
     # Create revenue schedule for credit memo item (manual distribution) 
-    api_response = api_instance.p_ostr_sfor_credit_memo_item_manual_distribution(body, cmi_id)
+    api_response = api_instance.p_ostr_sfor_credit_memo_item_manual_distribution(cmi_id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_credit_memo_item_manual_distribution: %s\n" % e)
@@ -508,8 +509,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **cmi_id** | **str**| The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).  | 
+ **body** | [**POSTRevenueScheduleByTransactionType**](POSTRevenueScheduleByTransactionType.md)|  | 
 
 ### Return type
 
@@ -522,12 +523,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_debit_memo_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_distribute_by_date_range(body, dmi_id)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
 
 Create revenue schedule for debit memo item (distribute by date range) 
 
@@ -543,12 +544,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 dmi_id = 'dmi_id_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
+body = zuora_client.POSTRevenueScheduleByTransactionRatablyDMType() # POSTRevenueScheduleByTransactionRatablyDMType | 
 
 try:
     # Create revenue schedule for debit memo item (distribute by date range) 
-    api_response = api_instance.p_ostr_sfor_debit_memo_item_distribute_by_date_range(body, dmi_id)
+    api_response = api_instance.p_ostr_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_debit_memo_item_distribute_by_date_range: %s\n" % e)
@@ -558,8 +559,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **dmi_id** | **str**| The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).  | 
+ **body** | [**POSTRevenueScheduleByTransactionRatablyDMType**](POSTRevenueScheduleByTransactionRatablyDMType.md)|  | 
 
 ### Return type
 
@@ -572,12 +573,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_debit_memo_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_manual_distribution(body, dmi_id)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_manual_distribution(dmi_id, body)
 
 Create revenue schedule for debit memo item (manual distribution) 
 
@@ -593,12 +594,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 dmi_id = 'dmi_id_example' # str | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
+body = zuora_client.POSTRevenueScheduleByTransactionType() # POSTRevenueScheduleByTransactionType | 
 
 try:
     # Create revenue schedule for debit memo item (manual distribution) 
-    api_response = api_instance.p_ostr_sfor_debit_memo_item_manual_distribution(body, dmi_id)
+    api_response = api_instance.p_ostr_sfor_debit_memo_item_manual_distribution(dmi_id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_debit_memo_item_manual_distribution: %s\n" % e)
@@ -608,8 +609,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **dmi_id** | **str**| The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).  | 
+ **body** | [**POSTRevenueScheduleByTransactionType**](POSTRevenueScheduleByTransactionType.md)|  | 
 
 ### Return type
 
@@ -622,12 +623,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(body, invoice_item_adj_key, zuora_entity_ids=zuora_entity_ids)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, zuora_entity_ids=zuora_entity_ids)
 
 Create revenue schedule for Invoice Item Adjustment (distribute by date range)
 
@@ -643,13 +644,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
+request = zuora_client.POSTRevenueScheduleByDateRangeType() # POSTRevenueScheduleByDateRangeType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create revenue schedule for Invoice Item Adjustment (distribute by date range)
-    api_response = api_instance.p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(body, invoice_item_adj_key, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range: %s\n" % e)
@@ -659,8 +660,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **invoice_item_adj_key** | **str**| ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail.  | 
+ **request** | [**POSTRevenueScheduleByDateRangeType**](POSTRevenueScheduleByDateRangeType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -674,12 +675,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_invoice_item_adjustment_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_manual_distribution(body, invoice_item_adj_key, zuora_entity_ids=zuora_entity_ids)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, zuora_entity_ids=zuora_entity_ids)
 
 Create revenue schedule for Invoice Item Adjustment (manual distribution)
 
@@ -695,13 +696,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 invoice_item_adj_key = 'invoice_item_adj_key_example' # str | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
+request = zuora_client.POSTRevenueScheduleByTransactionType() # POSTRevenueScheduleByTransactionType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create revenue schedule for Invoice Item Adjustment (manual distribution)
-    api_response = api_instance.p_ostr_sfor_invoice_item_adjustment_manual_distribution(body, invoice_item_adj_key, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostr_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_adjustment_manual_distribution: %s\n" % e)
@@ -711,8 +712,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **invoice_item_adj_key** | **str**| ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail.  | 
+ **request** | [**POSTRevenueScheduleByTransactionType**](POSTRevenueScheduleByTransactionType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -726,12 +727,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_invoice_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_distribute_by_date_range(body, invoice_item_id, zuora_entity_ids=zuora_entity_ids)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Create revenue schedule for Invoice Item (distribute by date range)
 
@@ -747,13 +748,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 invoice_item_id = 'invoice_item_id_example' # str | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
+request = zuora_client.POSTRevenueScheduleByDateRangeType() # POSTRevenueScheduleByDateRangeType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create revenue schedule for Invoice Item (distribute by date range)
-    api_response = api_instance.p_ostr_sfor_invoice_item_distribute_by_date_range(body, invoice_item_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostr_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_distribute_by_date_range: %s\n" % e)
@@ -763,8 +764,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **invoice_item_id** | **str**| ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail.  | 
+ **request** | [**POSTRevenueScheduleByDateRangeType**](POSTRevenueScheduleByDateRangeType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -778,12 +779,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_invoice_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_manual_distribution(body, invoice_item_id, zuora_entity_ids=zuora_entity_ids)
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_manual_distribution(invoice_item_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Create revenue schedule for Invoice Item (manual distribution)
 
@@ -799,13 +800,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 invoice_item_id = 'invoice_item_id_example' # str | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
+request = zuora_client.POSTRevenueScheduleByTransactionType() # POSTRevenueScheduleByTransactionType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create revenue schedule for Invoice Item (manual distribution)
-    api_response = api_instance.p_ostr_sfor_invoice_item_manual_distribution(body, invoice_item_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostr_sfor_invoice_item_manual_distribution(invoice_item_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_manual_distribution: %s\n" % e)
@@ -815,8 +816,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **invoice_item_id** | **str**| ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail.  | 
+ **request** | [**POSTRevenueScheduleByTransactionType**](POSTRevenueScheduleByTransactionType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -830,12 +831,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ostr_sfor_subsc_charge**
-> POSTRevenueScheduleByChargeResponseType p_ostr_sfor_subsc_charge(body, charge_key, zuora_entity_ids=zuora_entity_ids)
+> POSTRevenueScheduleByChargeResponseType p_ostr_sfor_subsc_charge(charge_key, request, zuora_entity_ids=zuora_entity_ids)
 
 Create revenue schedule on subscription charge
 
@@ -851,13 +852,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 charge_key = 'charge_key_example' # str | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
+request = zuora_client.POSTRevenueScheduleByChargeType() # POSTRevenueScheduleByChargeType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create revenue schedule on subscription charge
-    api_response = api_instance.p_ostr_sfor_subsc_charge(body, charge_key, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ostr_sfor_subsc_charge(charge_key, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ostr_sfor_subsc_charge: %s\n" % e)
@@ -867,8 +868,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **charge_key** | **str**| ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012. | 
+ **request** | [**POSTRevenueScheduleByChargeType**](POSTRevenueScheduleByChargeType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -882,12 +883,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_revenue_across_ap**
-> PUTRevenueScheduleResponseType p_ut_revenue_across_ap(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+> PUTRevenueScheduleResponseType p_ut_revenue_across_ap(rs_number, request, zuora_entity_ids=zuora_entity_ids)
 
 Distribute revenue across accounting periods
 
@@ -903,13 +904,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+request = zuora_client.PUTAllocateManuallyType() # PUTAllocateManuallyType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Distribute revenue across accounting periods
-    api_response = api_instance.p_ut_revenue_across_ap(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_revenue_across_ap(rs_number, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ut_revenue_across_ap: %s\n" % e)
@@ -919,8 +920,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **rs_number** | **str**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
+ **request** | [**PUTAllocateManuallyType**](PUTAllocateManuallyType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -934,12 +935,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_revenue_by_recognition_startand_end_dates**
-> PUTRevenueScheduleResponseType p_ut_revenue_by_recognition_startand_end_dates(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+> PUTRevenueScheduleResponseType p_ut_revenue_by_recognition_startand_end_dates(rs_number, request, zuora_entity_ids=zuora_entity_ids)
 
 Distribute revenue by recognition start and end dates
 
@@ -955,13 +956,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+request = zuora_client.PUTRSTermType() # PUTRSTermType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Distribute revenue by recognition start and end dates
-    api_response = api_instance.p_ut_revenue_by_recognition_startand_end_dates(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_revenue_by_recognition_startand_end_dates(rs_number, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ut_revenue_by_recognition_startand_end_dates: %s\n" % e)
@@ -971,8 +972,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **rs_number** | **str**| Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
+ **request** | [**PUTRSTermType**](PUTRSTermType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -986,12 +987,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_revenue_specific_date**
-> PUTRevenueScheduleResponseType p_ut_revenue_specific_date(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+> PUTRevenueScheduleResponseType p_ut_revenue_specific_date(rs_number, request, zuora_entity_ids=zuora_entity_ids)
 
 Distribute revenue on specific date
 
@@ -1007,13 +1008,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+request = zuora_client.PUTSpecificDateAllocationType() # PUTSpecificDateAllocationType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Distribute revenue on specific date
-    api_response = api_instance.p_ut_revenue_specific_date(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_revenue_specific_date(rs_number, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_ut_revenue_specific_date: %s\n" % e)
@@ -1023,8 +1024,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **rs_number** | **str**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
+ **request** | [**PUTSpecificDateAllocationType**](PUTSpecificDateAllocationType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -1038,12 +1039,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_utrs_basic_info**
-> CommonResponseType p_utrs_basic_info(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_utrs_basic_info(rs_number, request, zuora_entity_ids=zuora_entity_ids)
 
 Update revenue schedule basic information
 
@@ -1059,13 +1060,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueSchedulesApi()
-body = zuora_client.Object() # Object | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+request = zuora_client.PUTRSBasicInfoType() # PUTRSBasicInfoType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update revenue schedule basic information
-    api_response = api_instance.p_utrs_basic_info(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_utrs_basic_info(rs_number, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueSchedulesApi->p_utrs_basic_info: %s\n" % e)
@@ -1075,8 +1076,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **rs_number** | **str**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
+ **request** | [**PUTRSBasicInfoType**](PUTRSBasicInfoType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -1090,7 +1091,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

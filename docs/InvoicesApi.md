@@ -1,6 +1,6 @@
 # zuora_client.InvoicesApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**p_ut_reverse_invoice**](InvoicesApi.md#p_ut_reverse_invoice) | **PUT** /v1/invoices/{invoiceId}/reverse | Reverse invoice
 [**p_ut_update_invoice**](InvoicesApi.md#p_ut_update_invoice) | **PUT** /v1/invoices/{invoiceId} | Update invoice
 [**p_ut_write_off_invoice**](InvoicesApi.md#p_ut_write_off_invoice) | **PUT** /v1/invoices/{invoiceId}/write-off | Write off invoice
+
 
 # **g_et_invoice_application_parts**
 > GetInvoiceApplicationPartCollectionType g_et_invoice_application_parts(invoice_id, zuora_entity_ids=zuora_entity_ids)
@@ -65,8 +66,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -89,7 +90,7 @@ from pprint import pprint
 api_instance = zuora_client.InvoicesApi()
 invoice_id = 'invoice_id_example' # str | The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # Get invoice files
@@ -105,7 +106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_id** | **str**| The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -117,8 +118,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -141,7 +142,7 @@ from pprint import pprint
 api_instance = zuora_client.InvoicesApi()
 invoice_id = 'invoice_id_example' # str | The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 
 try:
     # Get invoice items
@@ -157,7 +158,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_id** | **str**| The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
 
@@ -169,8 +170,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -194,8 +195,8 @@ api_instance = zuora_client.InvoicesApi()
 invoice_id = 'invoice_id_example' # str | The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 item_id = 'item_id_example' # str | The unique ID of an invoice item. For example, 2c86c8955bd63cc1015bd7c151af02ef. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
-page = 56 # int | Page number.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
+page = 1 # int | Page number.  (optional) (default to 1)
 
 try:
     # Get taxation items of invoice item
@@ -212,8 +213,8 @@ Name | Type | Description  | Notes
  **invoice_id** | **str**| The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
  **item_id** | **str**| The unique ID of an invoice item. For example, 2c86c8955bd63cc1015bd7c151af02ef.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
- **page** | **int**| Page number.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
+ **page** | **int**| Page number.  | [optional] [default to 1]
 
 ### Return type
 
@@ -225,8 +226,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json, success
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -234,6 +235,8 @@ No authorization required
 > ProxyDeleteResponse object_delete_invoice(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
 CRUD: Delete invoice
+
+
 
 ### Example
 ```python
@@ -263,7 +266,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Object id | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -275,8 +278,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -284,6 +287,8 @@ No authorization required
 > ProxyGetInvoice object_get_invoice(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
 
 CRUD: Get invoice
+
+
 
 ### Example
 ```python
@@ -314,7 +319,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Object id | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **fields** | **str**| Object fields to return | [optional] 
 
 ### Return type
@@ -327,15 +332,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **object_put_invoice**
-> ProxyCreateOrModifyResponse object_put_invoice(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+> ProxyCreateOrModifyResponse object_put_invoice(id, modify_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
 CRUD: Update invoice
+
+
 
 ### Example
 ```python
@@ -347,14 +354,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.ProxyModifyInvoice() # ProxyModifyInvoice | 
 id = 'id_example' # str | Object id
+modify_request = zuora_client.ProxyModifyInvoice() # ProxyModifyInvoice | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 
 try:
     # CRUD: Update invoice
-    api_response = api_instance.object_put_invoice(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+    api_response = api_instance.object_put_invoice(id, modify_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->object_put_invoice: %s\n" % e)
@@ -364,10 +371,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProxyModifyInvoice**](ProxyModifyInvoice.md)|  | 
  **id** | **str**| Object id | 
+ **modify_request** | [**ProxyModifyInvoice**](ProxyModifyInvoice.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -380,7 +387,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -432,12 +439,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_debit_memo_from_invoice**
-> GETDebitMemoType p_ost_debit_memo_from_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+> GETDebitMemoType p_ost_debit_memo_from_invoice(invoice_id, body, zuora_entity_ids=zuora_entity_ids)
 
 Create debit memo from invoice
 
@@ -453,13 +460,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.DebitMemoFromInvoiceType() # DebitMemoFromInvoiceType | 
 invoice_id = 'invoice_id_example' # str | The ID of an invoice that you want to create a debit memo from. 
+body = zuora_client.DebitMemoFromInvoiceType() # DebitMemoFromInvoiceType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create debit memo from invoice
-    api_response = api_instance.p_ost_debit_memo_from_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_debit_memo_from_invoice(invoice_id, body, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ost_debit_memo_from_invoice: %s\n" % e)
@@ -469,8 +476,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DebitMemoFromInvoiceType**](DebitMemoFromInvoiceType.md)|  | 
  **invoice_id** | **str**| The ID of an invoice that you want to create a debit memo from.  | 
+ **body** | [**DebitMemoFromInvoiceType**](DebitMemoFromInvoiceType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -484,12 +491,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_email_invoice**
-> CommonResponseType p_ost_email_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ost_email_invoice(request, invoice_id, zuora_entity_ids=zuora_entity_ids)
 
 Email invoice
 
@@ -505,13 +512,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.PostInvoiceEmailRequestType() # PostInvoiceEmailRequestType | 
+request = zuora_client.PostInvoiceEmailRequestType() # PostInvoiceEmailRequestType | 
 invoice_id = 'invoice_id_example' # str | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Email invoice
-    api_response = api_instance.p_ost_email_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_email_invoice(request, invoice_id, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ost_email_invoice: %s\n" % e)
@@ -521,7 +528,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostInvoiceEmailRequestType**](PostInvoiceEmailRequestType.md)|  | 
+ **request** | [**PostInvoiceEmailRequestType**](PostInvoiceEmailRequestType.md)|  | 
  **invoice_id** | **str**| The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
@@ -536,12 +543,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_upload_file_for_invoice**
-> POSTUploadFileResponse p_ost_upload_file_for_invoice(invoice_id, file=file, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+> POSTUploadFileResponse p_ost_upload_file_for_invoice(invoice_id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, file=file)
 
 Upload file for invoice
 
@@ -558,13 +565,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
 invoice_id = 'invoice_id_example' # str | The ID of the invoice that you want to upload a PDF file for. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
-file = 'file_example' # file |  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
+file = '/path/to/file.txt' # file | The PDF file to upload for the invoice.  (optional)
 
 try:
     # Upload file for invoice
-    api_response = api_instance.p_ost_upload_file_for_invoice(invoice_id, file=file, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+    api_response = api_instance.p_ost_upload_file_for_invoice(invoice_id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, file=file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ost_upload_file_for_invoice: %s\n" % e)
@@ -575,9 +582,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_id** | **str**| The ID of the invoice that you want to upload a PDF file for. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
- **file** | **file**|  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
+ **file** | **file**| The PDF file to upload for the invoice.  | [optional] 
 
 ### Return type
 
@@ -590,12 +597,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_batch_update_invoices**
-> CommonResponseType p_ut_batch_update_invoices(body, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ut_batch_update_invoices(request, zuora_entity_ids=zuora_entity_ids)
 
 Update invoices
 
@@ -611,12 +618,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.PutBatchInvoiceType() # PutBatchInvoiceType | 
+request = zuora_client.PutBatchInvoiceType() # PutBatchInvoiceType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update invoices
-    api_response = api_instance.p_ut_batch_update_invoices(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_batch_update_invoices(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ut_batch_update_invoices: %s\n" % e)
@@ -626,7 +633,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PutBatchInvoiceType**](PutBatchInvoiceType.md)|  | 
+ **request** | [**PutBatchInvoiceType**](PutBatchInvoiceType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -640,12 +647,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_reverse_invoice**
-> PutReverseInvoiceResponseType p_ut_reverse_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+> PutReverseInvoiceResponseType p_ut_reverse_invoice(invoice_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Reverse invoice
 
@@ -661,13 +668,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.PutReverseInvoiceType() # PutReverseInvoiceType | 
 invoice_id = 'invoice_id_example' # str | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
+request = zuora_client.PutReverseInvoiceType() # PutReverseInvoiceType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Reverse invoice
-    api_response = api_instance.p_ut_reverse_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_reverse_invoice(invoice_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ut_reverse_invoice: %s\n" % e)
@@ -677,8 +684,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PutReverseInvoiceType**](PutReverseInvoiceType.md)|  | 
  **invoice_id** | **str**| The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
+ **request** | [**PutReverseInvoiceType**](PutReverseInvoiceType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -692,12 +699,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_update_invoice**
-> PutInvoiceResponseType p_ut_update_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+> PutInvoiceResponseType p_ut_update_invoice(invoice_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Update invoice
 
@@ -713,13 +720,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.PutInvoiceType() # PutInvoiceType | 
 invoice_id = 'invoice_id_example' # str | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
+request = zuora_client.PutInvoiceType() # PutInvoiceType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update invoice
-    api_response = api_instance.p_ut_update_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_update_invoice(invoice_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ut_update_invoice: %s\n" % e)
@@ -729,8 +736,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PutInvoiceType**](PutInvoiceType.md)|  | 
  **invoice_id** | **str**| The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
+ **request** | [**PutInvoiceType**](PutInvoiceType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -744,12 +751,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_write_off_invoice**
-> PUTWriteOffInvoiceResponse p_ut_write_off_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+> PUTWriteOffInvoiceResponse p_ut_write_off_invoice(invoice_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Write off invoice
 
@@ -765,13 +772,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.InvoicesApi()
-body = zuora_client.Object() # Object | 
 invoice_id = 'invoice_id_example' # str | The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
+request = zuora_client.PUTWriteOffInvoiceRequest() # PUTWriteOffInvoiceRequest | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Write off invoice
-    api_response = api_instance.p_ut_write_off_invoice(body, invoice_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_write_off_invoice(invoice_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoicesApi->p_ut_write_off_invoice: %s\n" % e)
@@ -781,8 +788,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
  **invoice_id** | **str**| The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
+ **request** | [**PUTWriteOffInvoiceRequest**](PUTWriteOffInvoiceRequest.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -796,7 +803,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

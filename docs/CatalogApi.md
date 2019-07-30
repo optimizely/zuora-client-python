@@ -1,12 +1,13 @@
 # zuora_client.CatalogApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**g_et_catalog**](CatalogApi.md#g_et_catalog) | **GET** /v1/catalog/products | Get product catalog
 [**g_et_product**](CatalogApi.md#g_et_product) | **GET** /v1/catalog/product/{product-id} | Get product
 [**p_ost_catalog**](CatalogApi.md#p_ost_catalog) | **POST** /v1/catalog/products/{product-id}/share | Multi-entity: Share a product with an Entity
+
 
 # **g_et_catalog**
 > GETCatalogType g_et_catalog(zuora_entity_ids=zuora_entity_ids, page_size=page_size, zuora_version=zuora_version)
@@ -26,7 +27,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.CatalogApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 10 # int | Number of rows returned per page.  (optional) (default to 10)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the `productRatePlans` field.  (optional)
 
 try:
@@ -42,7 +43,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 10]
  **zuora_version** | **str**| The minor version of the Zuora REST API.   You only need to set this parameter if you use the &#x60;productRatePlans&#x60; field.  | [optional] 
 
 ### Return type
@@ -55,8 +56,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -107,13 +108,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_catalog**
-> CommonResponseType p_ost_catalog(body, product_id, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ost_catalog(product_id, request, zuora_entity_ids=zuora_entity_ids)
 
 Multi-entity: Share a product with an Entity
 
@@ -129,13 +130,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.CatalogApi()
-body = zuora_client.POSTCatalogType() # POSTCatalogType | 
 product_id = 'product_id_example' # str | The unique ID of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe.
+request = zuora_client.POSTCatalogType() # POSTCatalogType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Multi-entity: Share a product with an Entity
-    api_response = api_instance.p_ost_catalog(body, product_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_catalog(product_id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CatalogApi->p_ost_catalog: %s\n" % e)
@@ -145,8 +146,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTCatalogType**](POSTCatalogType.md)|  | 
  **product_id** | **str**| The unique ID of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe. | 
+ **request** | [**POSTCatalogType**](POSTCatalogType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -160,7 +161,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**available_to_credit_amount** | [**BigDecimal**](BigDecimal.md) | The amount of the invoice taxation item that is available to credit.  | [optional] 
+**available_to_credit_amount** | **float** | The amount of the invoice taxation item that is available to credit.  | [optional] 
 **balance** | **float** | The balance of the taxation item.  | [optional] 
 **credit_amount** | **float** | The amount of credit memos applied to the taxation item.   | [optional] 
 **exempt_amount** | **float** | The amount of taxes or VAT for which the customer has an exemption.  | [optional] 
@@ -21,4 +21,5 @@ Name | Type | Description | Notes
 **tax_rate_type** | **str** | The type of the tax rate.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

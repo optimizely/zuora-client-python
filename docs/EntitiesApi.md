@@ -1,6 +1,6 @@
 # zuora_client.EntitiesApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**p_ost_entities**](EntitiesApi.md#p_ost_entities) | **POST** /v1/entities | Multi-entity: Create entity
 [**p_ut_entities**](EntitiesApi.md#p_ut_entities) | **PUT** /v1/entities/{id} | Multi-entity: Update entity
 [**p_ut_provision_entity**](EntitiesApi.md#p_ut_provision_entity) | **PUT** /v1/entities/{id}/provision | Multi-entity: Provision entity
+
 
 # **d_elete_entities**
 > DELETEntityResponseType d_elete_entities(id, zuora_entity_ids=zuora_entity_ids)
@@ -56,8 +57,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -106,8 +107,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -156,13 +157,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_entities**
-> CreateEntityResponseType p_ost_entities(body, zuora_entity_ids=zuora_entity_ids)
+> CreateEntityResponseType p_ost_entities(request, zuora_entity_ids=zuora_entity_ids)
 
 Multi-entity: Create entity
 
@@ -178,12 +179,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.EntitiesApi()
-body = zuora_client.CreateEntityType() # CreateEntityType | 
+request = zuora_client.CreateEntityType() # CreateEntityType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Multi-entity: Create entity
-    api_response = api_instance.p_ost_entities(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_entities(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntitiesApi->p_ost_entities: %s\n" % e)
@@ -193,7 +194,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateEntityType**](CreateEntityType.md)|  | 
+ **request** | [**CreateEntityType**](CreateEntityType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -207,12 +208,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_entities**
-> UpdateEntityResponseType p_ut_entities(body, id, zuora_entity_ids=zuora_entity_ids)
+> UpdateEntityResponseType p_ut_entities(id, request, zuora_entity_ids=zuora_entity_ids)
 
 Multi-entity: Update entity
 
@@ -228,13 +229,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.EntitiesApi()
-body = zuora_client.UpdateEntityType() # UpdateEntityType | 
 id = 'id_example' # str | The Id of the entity that you want to edit. You can get the entity Id from the GET Entities call.
+request = zuora_client.UpdateEntityType() # UpdateEntityType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Multi-entity: Update entity
-    api_response = api_instance.p_ut_entities(body, id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_entities(id, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntitiesApi->p_ut_entities: %s\n" % e)
@@ -244,8 +245,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateEntityType**](UpdateEntityType.md)|  | 
  **id** | **str**| The Id of the entity that you want to edit. You can get the entity Id from the GET Entities call. | 
+ **request** | [**UpdateEntityType**](UpdateEntityType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -259,7 +260,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -308,8 +309,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **balance** | **float** | The balance of the taxation item.  | [optional] 
 **credit_amount** | **float** | The amount of credit memos applied to the debit memo.   | [optional] 
 **exempt_amount** | **float** | The amount of taxes or VAT for which the customer has an exemption.  | [optional] 
-**finance_information** | **object** | Container for the finance information related to the taxation item.  | [optional] 
+**finance_information** | [**GETDMTaxItemTypeFinanceInformation**](GETDMTaxItemTypeFinanceInformation.md) |  | [optional] 
 **id** | **str** | The ID of the taxation item.  | [optional] 
 **jurisdiction** | **str** | The jurisdiction that applies the tax or VAT. This value is typically a state, province, county, or city.  | [optional] 
 **location_code** | **str** | The identifier for the location based on the value of the &#x60;taxCode&#x60; field.  | [optional] 
@@ -22,4 +22,5 @@ Name | Type | Description | Notes
 **tax_rate_type** | **str** | The type of the tax rate.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

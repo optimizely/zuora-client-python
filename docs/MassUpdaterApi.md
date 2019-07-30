@@ -1,12 +1,13 @@
 # zuora_client.MassUpdaterApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**g_et_mass_updater**](MassUpdaterApi.md#g_et_mass_updater) | **GET** /v1/bulk/{bulk-key} | Get mass action result
 [**p_ost_mass_updater**](MassUpdaterApi.md#p_ost_mass_updater) | **POST** /v1/bulk | Perform mass action
 [**p_ut_mass_updater**](MassUpdaterApi.md#p_ut_mass_updater) | **PUT** /v1/bulk/{bulk-key}/stop | Stop mass action
+
 
 # **g_et_mass_updater**
 > GETMassUpdateType g_et_mass_updater(bulk_key, zuora_entity_ids=zuora_entity_ids)
@@ -53,8 +54,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -75,8 +76,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.MassUpdaterApi()
-file = 'file_example' # file | 
-params = 'params_example' # str | 
+file = '/path/to/file.txt' # file | File containing data about the mass action you want to perform. The file requirements are the same as when uploading a file through the Mass Updater in the Zuora UI. The file must be a .csv file or a zipped .csv file.  The maximum file size is 4 MB.  The data in the file must be formatted according to the mass action type you want to perform. 
+params = 'params_example' # str | Container for the following fields. You must format this parameter as a JSON object.  * `actionType` (string, **Required**) - Type of mass action you want to perform. The following mass actions are supported: `UpdateAccountingCode`, `CreateRevenueSchedule`, `UpdateRevenueSchedule`, `DeleteRevenueSchedule`, `ImportFXRate`, and `MPU`.  * `checksum` (string) - An MD5 checksum that is used to validate the integrity of   the uploaded file. The checksum is a 32-character string. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -91,8 +92,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **file**|  | 
- **params** | [**str**](.md)|  | 
+ **file** | **file**| File containing data about the mass action you want to perform. The file requirements are the same as when uploading a file through the Mass Updater in the Zuora UI. The file must be a .csv file or a zipped .csv file.  The maximum file size is 4 MB.  The data in the file must be formatted according to the mass action type you want to perform.  | 
+ **params** | **str**| Container for the following fields. You must format this parameter as a JSON object.  * &#x60;actionType&#x60; (string, **Required**) - Type of mass action you want to perform. The following mass actions are supported: &#x60;UpdateAccountingCode&#x60;, &#x60;CreateRevenueSchedule&#x60;, &#x60;UpdateRevenueSchedule&#x60;, &#x60;DeleteRevenueSchedule&#x60;, &#x60;ImportFXRate&#x60;, and &#x60;MPU&#x60;.  * &#x60;checksum&#x60; (string) - An MD5 checksum that is used to validate the integrity of   the uploaded file. The checksum is a 32-character string.  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -106,7 +107,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -155,8 +156,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

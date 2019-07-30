@@ -1,6 +1,6 @@
 # zuora_client.UsersApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**p_ut_accept_user_access**](UsersApi.md#p_ut_accept_user_access) | **PUT** /v1/users/{username}/accept-access | Multi-entity: Accept user access
 [**p_ut_deny_user_access**](UsersApi.md#p_ut_deny_user_access) | **PUT** /v1/users/{username}/deny-access | Multi-entity: Deny user access
 [**p_ut_send_user_access_requests**](UsersApi.md#p_ut_send_user_access_requests) | **PUT** /v1/users/{username}/request-access | Multi-entity: Send user access requests
+
 
 # **g_et_entities_user_accessible**
 > GETEntitiesUserAccessibleResponseType g_et_entities_user_accessible(username, zuora_entity_ids=zuora_entity_ids)
@@ -54,8 +55,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -104,8 +105,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -154,13 +155,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_send_user_access_requests**
-> PUTSendUserAccessRequestResponseType p_ut_send_user_access_requests(body, username, zuora_entity_ids=zuora_entity_ids)
+> PUTSendUserAccessRequestResponseType p_ut_send_user_access_requests(username, request, zuora_entity_ids=zuora_entity_ids)
 
 Multi-entity: Send user access requests
 
@@ -176,13 +177,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.UsersApi()
-body = zuora_client.PUTSendUserAccessRequestType() # PUTSendUserAccessRequestType | 
 username = 'username_example' # str | Specify the login name of the user who wants to access other entities. 
+request = zuora_client.PUTSendUserAccessRequestType() # PUTSendUserAccessRequestType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Multi-entity: Send user access requests
-    api_response = api_instance.p_ut_send_user_access_requests(body, username, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_send_user_access_requests(username, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->p_ut_send_user_access_requests: %s\n" % e)
@@ -192,8 +193,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTSendUserAccessRequestType**](PUTSendUserAccessRequestType.md)|  | 
  **username** | **str**| Specify the login name of the user who wants to access other entities.  | 
+ **request** | [**PUTSendUserAccessRequestType**](PUTSendUserAccessRequestType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -207,7 +208,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # zuora_client.RevenueItemsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**g_et_revenue_items_by_revenue_schedule**](RevenueItemsApi.md#g_et_revenue_items_by_revenue_schedule) | **GET** /v1/revenue-items/revenue-schedules/{rs-number} | Get revenue items by revenue schedule
 [**p_ut_custom_fieldson_revenue_items_by_revenue_event**](RevenueItemsApi.md#p_ut_custom_fieldson_revenue_items_by_revenue_event) | **PUT** /v1/revenue-items/revenue-events/{event-number} | Update custom fields on revenue items by revenue event number
 [**p_ut_custom_fieldson_revenue_items_by_revenue_schedule**](RevenueItemsApi.md#p_ut_custom_fieldson_revenue_items_by_revenue_schedule) | **PUT** /v1/revenue-items/revenue-schedules/{rs-number} | Update custom fields on revenue items by revenue schedule number
+
 
 # **g_et_revenue_items_by_charge_revenue_event_number**
 > GETRevenueItemsType g_et_revenue_items_by_charge_revenue_event_number(event_number, zuora_entity_ids=zuora_entity_ids, page_size=page_size)
@@ -29,7 +30,7 @@ from pprint import pprint
 api_instance = zuora_client.RevenueItemsApi()
 event_number = 'event_number_example' # str | The number associated with the revenue event.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 300 # int | Number of rows returned per page.  (optional) (default to 300)
 
 try:
     # Get revenue items by revenue event number
@@ -45,7 +46,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **event_number** | **str**| The number associated with the revenue event. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 300]
 
 ### Return type
 
@@ -57,8 +58,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -81,7 +82,7 @@ from pprint import pprint
 api_instance = zuora_client.RevenueItemsApi()
 crs_number = 'crs_number_example' # str | The charge revenue summary number.
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 300 # int | Number of rows returned per page.  (optional) (default to 300)
 
 try:
     # Get revenue items by charge revenue summary number
@@ -97,7 +98,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **crs_number** | **str**| The charge revenue summary number. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 300]
 
 ### Return type
 
@@ -109,8 +110,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -133,7 +134,7 @@ from pprint import pprint
 api_instance = zuora_client.RevenueItemsApi()
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 300 # int | Number of rows returned per page.  (optional) (default to 300)
 
 try:
     # Get revenue items by revenue schedule
@@ -149,7 +150,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **str**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;. | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 300]
 
 ### Return type
 
@@ -161,13 +162,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_custom_fieldson_revenue_items_by_revenue_event**
-> CommonResponseType p_ut_custom_fieldson_revenue_items_by_revenue_event(body, event_number, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ut_custom_fieldson_revenue_items_by_revenue_event(event_number, request, zuora_entity_ids=zuora_entity_ids)
 
 Update custom fields on revenue items by revenue event number
 
@@ -183,13 +184,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueItemsApi()
-body = zuora_client.PUTEventRIDetailType() # PUTEventRIDetailType | 
 event_number = 'event_number_example' # str | The number associated with the revenue event.
+request = zuora_client.PUTEventRIDetailType() # PUTEventRIDetailType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update custom fields on revenue items by revenue event number
-    api_response = api_instance.p_ut_custom_fieldson_revenue_items_by_revenue_event(body, event_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_custom_fieldson_revenue_items_by_revenue_event(event_number, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueItemsApi->p_ut_custom_fieldson_revenue_items_by_revenue_event: %s\n" % e)
@@ -199,8 +200,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTEventRIDetailType**](PUTEventRIDetailType.md)|  | 
  **event_number** | **str**| The number associated with the revenue event. | 
+ **request** | [**PUTEventRIDetailType**](PUTEventRIDetailType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -214,12 +215,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_custom_fieldson_revenue_items_by_revenue_schedule**
-> CommonResponseType p_ut_custom_fieldson_revenue_items_by_revenue_schedule(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+> CommonResponseType p_ut_custom_fieldson_revenue_items_by_revenue_schedule(rs_number, request, zuora_entity_ids=zuora_entity_ids)
 
 Update custom fields on revenue items by revenue schedule number
 
@@ -235,13 +236,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.RevenueItemsApi()
-body = zuora_client.PUTScheduleRIDetailType() # PUTScheduleRIDetailType | 
 rs_number = 'rs_number_example' # str | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
+request = zuora_client.PUTScheduleRIDetailType() # PUTScheduleRIDetailType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update custom fields on revenue items by revenue schedule number
-    api_response = api_instance.p_ut_custom_fieldson_revenue_items_by_revenue_schedule(body, rs_number, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_custom_fieldson_revenue_items_by_revenue_schedule(rs_number, request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RevenueItemsApi->p_ut_custom_fieldson_revenue_items_by_revenue_schedule: %s\n" % e)
@@ -251,8 +252,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTScheduleRIDetailType**](PUTScheduleRIDetailType.md)|  | 
  **rs_number** | **str**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;. | 
+ **request** | [**PUTScheduleRIDetailType**](PUTScheduleRIDetailType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -266,7 +267,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

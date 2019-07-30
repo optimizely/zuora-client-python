@@ -1,13 +1,14 @@
 # zuora_client.QuotesDocumentApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**p_ost_quotes_document**](QuotesDocumentApi.md#p_ost_quotes_document) | **POST** /v1/quotes/document | Generate quotes document
 
+
 # **p_ost_quotes_document**
-> POSTQuoteDocResponseType p_ost_quotes_document(body, zuora_entity_ids=zuora_entity_ids)
+> POSTQuoteDocResponseType p_ost_quotes_document(request, zuora_entity_ids=zuora_entity_ids)
 
 Generate quotes document
 
@@ -23,12 +24,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.QuotesDocumentApi()
-body = zuora_client.POSTQuoteDocType() # POSTQuoteDocType | 
+request = zuora_client.POSTQuoteDocType() # POSTQuoteDocType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Generate quotes document
-    api_response = api_instance.p_ost_quotes_document(body, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_quotes_document(request, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling QuotesDocumentApi->p_ost_quotes_document: %s\n" % e)
@@ -38,7 +39,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTQuoteDocType**](POSTQuoteDocType.md)|  | 
+ **request** | [**POSTQuoteDocType**](POSTQuoteDocType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -52,7 +53,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # zuora_client.NotificationsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**p_ost_create_notification_definition**](NotificationsApi.md#p_ost_create_notification_definition) | **POST** /notifications/notification-definitions | Create a notification definition
 [**p_ut_update_email_template**](NotificationsApi.md#p_ut_update_email_template) | **PUT** /notifications/email-templates/{id} | Update an email template
 [**p_ut_update_notification_definition**](NotificationsApi.md#p_ut_update_notification_definition) | **PUT** /notifications/notification-definitions/{id} | Update a notification definition
+
 
 # **d_elete_delete_email_template**
 > d_elete_delete_email_template(authorization, id, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
@@ -35,7 +36,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template to be deleted.
+id = 'id_example' # str | The ID of the email template to be deleted.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -52,7 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
  **id** | [**str**](.md)| The ID of the email template to be deleted. | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -65,8 +66,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -88,7 +89,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the notification definition to be deleted.
+id = 'id_example' # str | The ID of the notification definition to be deleted.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -105,7 +106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
  **id** | [**str**](.md)| The ID of the notification definition to be deleted. | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -118,8 +119,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -141,7 +142,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 end_time = '2013-10-20T19:20:30+01:00' # datetime | The final date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss. (optional)
 start_time = '2013-10-20T19:20:30+01:00' # datetime | The initial date and time of records to be returned. Defaults to (end time - 1 day). Use format yyyy-MM-ddTHH:mm:ss. (optional)
 object_id = 'object_id_example' # str | The ID of an object that triggered a callout notification. (optional)
@@ -162,7 +163,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **end_time** | **datetime**| The final date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss. | [optional] 
  **start_time** | **datetime**| The initial date and time of records to be returned. Defaults to (end time - 1 day). Use format yyyy-MM-ddTHH:mm:ss. | [optional] 
  **object_id** | **str**| The ID of an object that triggered a callout notification. | [optional] 
@@ -180,8 +181,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -203,7 +204,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 end_time = '2013-10-20T19:20:30+01:00' # datetime | The end date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss. The maximum date range (endTime - startTime) is three days. (optional)
 start_time = '2013-10-20T19:20:30+01:00' # datetime | The initial date and time of records to be returned. Defaults to (end time - 1 day). Use format yyyy-MM-ddTHH:mm:ss. The maximum date range (endTime - startTime) is three days. (optional)
 object_id = 'object_id_example' # str | The Id of an object that triggered an email notification. (optional)
@@ -223,7 +224,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **end_time** | **datetime**| The end date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss. The maximum date range (endTime - startTime) is three days. | [optional] 
  **start_time** | **datetime**| The initial date and time of records to be returned. Defaults to (end time - 1 day). Use format yyyy-MM-ddTHH:mm:ss. The maximum date range (endTime - startTime) is three days. | [optional] 
  **object_id** | **str**| The Id of an object that triggered an email notification. | [optional] 
@@ -240,8 +241,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -263,7 +264,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template.
+id = 'id_example' # str | The ID of the email template.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -281,7 +282,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
  **id** | [**str**](.md)| The ID of the email template. | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -294,8 +295,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -317,7 +318,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the notification definition.
+id = 'id_example' # str | The ID of the notification definition.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
@@ -335,7 +336,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
  **id** | [**str**](.md)| The ID of the notification definition. | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -348,13 +349,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **g_et_query_email_templates**
-> object g_et_query_email_templates(authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids, start=start, limit=limit, event_type_name=event_type_name, name=name)
+> InlineResponse2003 g_et_query_email_templates(authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids, start=start, limit=limit, event_type_name=event_type_name, name=name)
 
 Query email templates
 
@@ -373,8 +374,8 @@ api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-start = 56 # int | The first index of the query result. (optional)
-limit = 56 # int | The maximum number of results the query should return. (optional)
+start = 1 # int | The first index of the query result. (optional) (default to 1)
+limit = 20 # int | The maximum number of results the query should return. (optional) (default to 20)
 event_type_name = 'event_type_name_example' # str | The name of the event. (optional)
 name = 'name_example' # str | The name of the email template. (optional)
 
@@ -391,16 +392,16 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **start** | **int**| The first index of the query result. | [optional] 
- **limit** | **int**| The maximum number of results the query should return. | [optional] 
+ **start** | **int**| The first index of the query result. | [optional] [default to 1]
+ **limit** | **int**| The maximum number of results the query should return. | [optional] [default to 20]
  **event_type_name** | **str**| The name of the event. | [optional] 
  **name** | **str**| The name of the email template. | [optional] 
 
 ### Return type
 
-**object**
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -408,13 +409,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **g_et_query_notification_definitions**
-> object g_et_query_notification_definitions(authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids, start=start, limit=limit, profile_id=profile_id, event_type_name=event_type_name, email_template_id=email_template_id)
+> InlineResponse2002 g_et_query_notification_definitions(authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids, start=start, limit=limit, profile_id=profile_id, event_type_name=event_type_name, email_template_id=email_template_id)
 
 Query notification definitions
 
@@ -433,11 +434,11 @@ api_instance = zuora_client.NotificationsApi()
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-start = 56 # int | The first index of the query result. (optional)
-limit = 56 # int | The maximum number of results the query should return. (optional)
-profile_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | Id of the profile. (optional)
+start = 1 # int | The first index of the query result. (optional) (default to 1)
+limit = 20 # int | The maximum number of results the query should return. (optional) (default to 20)
+profile_id = 'profile_id_example' # str | Id of the profile. (optional)
 event_type_name = 'event_type_name_example' # str | The name of the event. (optional)
-email_template_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template. (optional)
+email_template_id = 'email_template_id_example' # str | The ID of the email template. (optional)
 
 try:
     # Query notification definitions
@@ -452,17 +453,17 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **start** | **int**| The first index of the query result. | [optional] 
- **limit** | **int**| The maximum number of results the query should return. | [optional] 
+ **start** | **int**| The first index of the query result. | [optional] [default to 1]
+ **limit** | **int**| The maximum number of results the query should return. | [optional] [default to 20]
  **profile_id** | [**str**](.md)| Id of the profile. | [optional] 
  **event_type_name** | **str**| The name of the event. | [optional] 
  **email_template_id** | [**str**](.md)| The ID of the email template. | [optional] 
 
 ### Return type
 
-**object**
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -470,13 +471,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_create_email_template**
-> GETPublicEmailTemplateResponse p_ost_create_email_template(body, authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+> GETPublicEmailTemplateResponse p_ost_create_email_template(authorization, post_public_email_template_request, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
 
 Create an email template
 
@@ -492,14 +493,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
-body = zuora_client.POSTPublicEmailTemplateRequest() # POSTPublicEmailTemplateRequest | The request body to create an email template.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
+post_public_email_template_request = zuora_client.POSTPublicEmailTemplateRequest() # POSTPublicEmailTemplateRequest | The request body to create an email template.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create an email template
-    api_response = api_instance.p_ost_create_email_template(body, authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_create_email_template(authorization, post_public_email_template_request, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationsApi->p_ost_create_email_template: %s\n" % e)
@@ -509,9 +510,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTPublicEmailTemplateRequest**](POSTPublicEmailTemplateRequest.md)| The request body to create an email template. | 
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **post_public_email_template_request** | [**POSTPublicEmailTemplateRequest**](POSTPublicEmailTemplateRequest.md)| The request body to create an email template. | 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -525,12 +526,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_create_notification_definition**
-> GETPublicNotificationDefinitionResponse p_ost_create_notification_definition(body, authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+> GETPublicNotificationDefinitionResponse p_ost_create_notification_definition(authorization, entity, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
 
 Create a notification definition
 
@@ -546,14 +547,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
-body = zuora_client.POSTPublicNotificationDefinitionRequest() # POSTPublicNotificationDefinitionRequest | The request body used to create the notification definition.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
+entity = zuora_client.POSTPublicNotificationDefinitionRequest() # POSTPublicNotificationDefinitionRequest | The request body used to create the notification definition.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Create a notification definition
-    api_response = api_instance.p_ost_create_notification_definition(body, authorization, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ost_create_notification_definition(authorization, entity, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationsApi->p_ost_create_notification_definition: %s\n" % e)
@@ -563,9 +564,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTPublicNotificationDefinitionRequest**](POSTPublicNotificationDefinitionRequest.md)| The request body used to create the notification definition. | 
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **entity** | [**POSTPublicNotificationDefinitionRequest**](POSTPublicNotificationDefinitionRequest.md)| The request body used to create the notification definition. | 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -579,12 +580,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_update_email_template**
-> GETPublicEmailTemplateResponse p_ut_update_email_template(body, authorization, id, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+> GETPublicEmailTemplateResponse p_ut_update_email_template(authorization, id, put_public_email_template_request, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
 
 Update an email template
 
@@ -600,15 +601,15 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
-body = zuora_client.PUTPublicEmailTemplateRequest() # PUTPublicEmailTemplateRequest | The request body to update an email template.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the email template to be updated.
+id = 'id_example' # str | The ID of the email template to be updated.
+put_public_email_template_request = zuora_client.PUTPublicEmailTemplateRequest() # PUTPublicEmailTemplateRequest | The request body to update an email template.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update an email template
-    api_response = api_instance.p_ut_update_email_template(body, authorization, id, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_update_email_template(authorization, id, put_public_email_template_request, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationsApi->p_ut_update_email_template: %s\n" % e)
@@ -618,10 +619,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTPublicEmailTemplateRequest**](PUTPublicEmailTemplateRequest.md)| The request body to update an email template. | 
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
  **id** | [**str**](.md)| The ID of the email template to be updated. | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **put_public_email_template_request** | [**PUTPublicEmailTemplateRequest**](PUTPublicEmailTemplateRequest.md)| The request body to update an email template. | 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -635,12 +636,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_update_notification_definition**
-> GETPublicNotificationDefinitionResponse p_ut_update_notification_definition(body, authorization, id, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+> GETPublicNotificationDefinitionResponse p_ut_update_notification_definition(authorization, id, put_public_notification_definition_request, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
 
 Update a notification definition
 
@@ -656,15 +657,15 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.NotificationsApi()
-body = zuora_client.PUTPublicNotificationDefinitionRequest() # PUTPublicNotificationDefinitionRequest | The request body of the notification definition to be updated.
 authorization = 'authorization_example' # str | `Bearer {token}` for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work. 
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The ID of the notification definition to be updated.
+id = 'id_example' # str | The ID of the notification definition to be updated.
+put_public_notification_definition_request = zuora_client.PUTPublicNotificationDefinitionRequest() # PUTPublicNotificationDefinitionRequest | The request body of the notification definition to be updated.
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update a notification definition
-    api_response = api_instance.p_ut_update_notification_definition(body, authorization, id, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_update_notification_definition(authorization, id, put_public_notification_definition_request, zuora_track_id=zuora_track_id, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationsApi->p_ut_update_notification_definition: %s\n" % e)
@@ -674,10 +675,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTPublicNotificationDefinitionRequest**](PUTPublicNotificationDefinitionRequest.md)| The request body of the notification definition to be updated. | 
  **authorization** | **str**| &#x60;Bearer {token}&#x60; for a valid OAuth token.  Note that you must regenerate the OAuth token after the Notification and the Configurable Event features are enabled in your Zuora tenant. The OAuth tokens generated before the features are turned on will not work.  | 
  **id** | [**str**](.md)| The ID of the notification definition to be updated. | 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **put_public_notification_definition_request** | [**PUTPublicNotificationDefinitionRequest**](PUTPublicNotificationDefinitionRequest.md)| The request body of the notification definition to be updated. | 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -691,7 +692,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

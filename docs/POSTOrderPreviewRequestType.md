@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **order_number** | **str** | The order number of this order. | [optional] 
 **preview_account_info** | [**PreviewAccountInfo**](PreviewAccountInfo.md) |  | [optional] 
 **preview_options** | [**PreviewOptions**](PreviewOptions.md) |  | 
-**subscriptions** | **list[object]** | Each item includes a set of order actions, which will be applied to the same base subscription. | 
+**subscriptions** | [**list[POSTOrderPreviewRequestTypeSubscriptions]**](POSTOrderPreviewRequestTypeSubscriptions.md) | Each item includes a set of order actions, which will be applied to the same base subscription. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

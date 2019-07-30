@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **float** | The amount of the taxation item in the debit memo item.  | [optional] 
-**finance_information** | **object** | Container for the finance information related to the taxation item in the debit memo item.  | [optional] 
+**finance_information** | [**PutDebitMemoTaxItemTypeFinanceInformation**](PutDebitMemoTaxItemTypeFinanceInformation.md) |  | [optional] 
 **id** | **str** | The ID of the taxation item in the debit memo item.  | 
 **jurisdiction** | **str** | The jurisdiction that applies the tax or VAT. This value is typically a state, province, county, or city.  | [optional] 
 **location_code** | **str** | The identifier for the location based on the value of the &#x60;taxCode&#x60; field.  | [optional] 
@@ -18,4 +18,5 @@ Name | Type | Description | Notes
 **tax_rate_type** | **str** | The type of the tax rate applied to the debit memo.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

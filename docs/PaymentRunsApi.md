@@ -1,6 +1,6 @@
 # zuora_client.PaymentRunsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**g_et_payment_runs**](PaymentRunsApi.md#g_et_payment_runs) | **GET** /v1/payment-runs | Get payment runs
 [**p_ost_payment_run**](PaymentRunsApi.md#p_ost_payment_run) | **POST** /v1/payment-runs | Create payment run
 [**p_ut_payment_run**](PaymentRunsApi.md#p_ut_payment_run) | **PUT** /v1/payment-runs/{paymentRunId} | Update payment run
+
 
 # **d_elete_payment_run**
 > CommonResponseType d_elete_payment_run(payment_run_id)
@@ -28,7 +29,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentRunsApi()
-payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
+payment_run_id = 'payment_run_id_example' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 
 try:
     # Delete payment run
@@ -54,7 +55,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -76,7 +77,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentRunsApi()
-payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
+payment_run_id = 'payment_run_id_example' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
@@ -104,7 +105,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -126,7 +127,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentRunsApi()
-payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
+payment_run_id = 'payment_run_id_example' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 
 try:
     # Get payment run summary
@@ -152,7 +153,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -175,7 +176,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = zuora_client.PaymentRunsApi()
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 created_by_id = 'created_by_id_example' # str | This parameter filters the response based on the `createdById` field.  (optional)
 created_date = '2013-10-20T19:20:30+01:00' # datetime | This parameter filters the response based on the `createdDate` field.  (optional)
 status = 'status_example' # str | This parameter filters the response based on the `status` field.  (optional)
@@ -197,7 +198,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **created_by_id** | **str**| This parameter filters the response based on the &#x60;createdById&#x60; field.  | [optional] 
  **created_date** | **datetime**| This parameter filters the response based on the &#x60;createdDate&#x60; field.  | [optional] 
  **status** | **str**| This parameter filters the response based on the &#x60;status&#x60; field.  | [optional] 
@@ -216,7 +217,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -267,12 +268,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_payment_run**
-> GETPaymentRunType p_ut_payment_run(body, payment_run_id, zuora_entity_ids=zuora_entity_ids)
+> GETPaymentRunType p_ut_payment_run(payment_run_id, body, zuora_entity_ids=zuora_entity_ids)
 
 Update payment run
 
@@ -288,13 +289,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.PaymentRunsApi()
+payment_run_id = 'payment_run_id_example' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 body = zuora_client.PUTPaymentRunRequest() # PUTPaymentRunRequest | 
-payment_run_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566. 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 
 try:
     # Update payment run
-    api_response = api_instance.p_ut_payment_run(body, payment_run_id, zuora_entity_ids=zuora_entity_ids)
+    api_response = api_instance.p_ut_payment_run(payment_run_id, body, zuora_entity_ids=zuora_entity_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentRunsApi->p_ut_payment_run: %s\n" % e)
@@ -304,8 +305,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTPaymentRunRequest**](PUTPaymentRunRequest.md)|  | 
  **payment_run_id** | [**str**](.md)| The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566.  | 
+ **body** | [**PUTPaymentRunRequest**](PUTPaymentRunRequest.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
@@ -319,7 +320,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

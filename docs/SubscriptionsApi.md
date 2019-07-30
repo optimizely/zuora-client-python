@@ -1,6 +1,6 @@
 # zuora_client.SubscriptionsApi
 
-All URIs are relative to *https://rest.zuora.com/*
+All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**p_ut_resume_subscription**](SubscriptionsApi.md#p_ut_resume_subscription) | **PUT** /v1/subscriptions/{subscription-key}/resume | Resume subscription
 [**p_ut_subscription**](SubscriptionsApi.md#p_ut_subscription) | **PUT** /v1/subscriptions/{subscription-key} | Update subscription
 [**p_ut_suspend_subscription**](SubscriptionsApi.md#p_ut_suspend_subscription) | **PUT** /v1/subscriptions/{subscription-key}/suspend | Suspend subscription
+
 
 # **g_et_subscriptions_by_account**
 > GETSubscriptionWrapper g_et_subscriptions_by_account(account_key, zuora_entity_ids=zuora_entity_ids, page_size=page_size, charge_detail=charge_detail)
@@ -37,7 +38,7 @@ from pprint import pprint
 api_instance = zuora_client.SubscriptionsApi()
 account_key = 'account_key_example' # str |  Possible values are: * an account number * an account ID 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
-page_size = 56 # int | Number of rows returned per page.  (optional)
+page_size = 20 # int | Number of rows returned per page.  (optional) (default to 20)
 charge_detail = 'charge_detail_example' # str | The segmented rate plan charges.  When an amendment results in a change to a charge, Zuora creates a segmented rate plan charge. Use this field to track segment charges.  Possible values are:  * __last-segment__: (Default) The last rate plan charge on the subscription. The last rate plan charge is the last one in the order of time on the subscription rather than the most recent changed charge on the subscription.  * __current-segment__: The segmented charge that is active on today’s date (effectiveStartDate <= today’s date < effectiveEndDate).    * __all-segments__: All the segmented charges. The `chargeSegments` field is returned in the response. The `chargeSegments` field contains an array of the charge information for all the charge segments.   * __specific-segment&as-of-date=date__: The segmented charge that is active on a date you specified (effectiveStartDate <= specific date < effectiveEndDate). The format of the date is yyyy-mm-dd.  (optional)
 
 try:
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_key** | **str**|  Possible values are: * an account number * an account ID  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **page_size** | **int**| Number of rows returned per page.  | [optional] 
+ **page_size** | **int**| Number of rows returned per page.  | [optional] [default to 20]
  **charge_detail** | **str**| The segmented rate plan charges.  When an amendment results in a change to a charge, Zuora creates a segmented rate plan charge. Use this field to track segment charges.  Possible values are:  * __last-segment__: (Default) The last rate plan charge on the subscription. The last rate plan charge is the last one in the order of time on the subscription rather than the most recent changed charge on the subscription.  * __current-segment__: The segmented charge that is active on today’s date (effectiveStartDate &lt;&#x3D; today’s date &lt; effectiveEndDate).    * __all-segments__: All the segmented charges. The &#x60;chargeSegments&#x60; field is returned in the response. The &#x60;chargeSegments&#x60; field contains an array of the charge information for all the charge segments.   * __specific-segment&amp;as-of-date&#x3D;date__: The segmented charge that is active on a date you specified (effectiveStartDate &lt;&#x3D; specific date &lt; effectiveEndDate). The format of the date is yyyy-mm-dd.  | [optional] 
 
 ### Return type
@@ -67,8 +68,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -119,8 +120,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -173,8 +174,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -213,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Object id | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -225,8 +226,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -234,6 +235,8 @@ No authorization required
 > ProxyGetSubscription object_get_subscription(id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id, fields=fields)
 
 CRUD: Retrieve Subscription
+
+
 
 ### Example
 ```python
@@ -264,7 +267,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Object id | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
  **fields** | **str**| Object fields to return | [optional] 
 
 ### Return type
@@ -277,13 +280,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **object_put_subscription**
-> ProxyCreateOrModifyResponse object_put_subscription(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+> ProxyCreateOrModifyResponse object_put_subscription(id, modify_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
 
 CRUD: Update Subscription
 
@@ -299,14 +302,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.ProxyModifySubscription() # ProxyModifySubscription | 
 id = 'id_example' # str | Object id
+modify_request = zuora_client.ProxyModifySubscription() # ProxyModifySubscription | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_track_id = 'zuora_track_id_example' # str | A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`\"`), and quote (`'`).  (optional)
 
 try:
     # CRUD: Update Subscription
-    api_response = api_instance.object_put_subscription(body, id, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
+    api_response = api_instance.object_put_subscription(id, modify_request, zuora_entity_ids=zuora_entity_ids, zuora_track_id=zuora_track_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->object_put_subscription: %s\n" % e)
@@ -316,10 +319,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProxyModifySubscription**](ProxyModifySubscription.md)|  | 
  **id** | **str**| Object id | 
+ **modify_request** | [**ProxyModifySubscription**](ProxyModifySubscription.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
- **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#x27;&#x60;).  | [optional] 
+ **zuora_track_id** | **str**| A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.  The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (&#x60;:&#x60;), semicolon (&#x60;;&#x60;), double quote (&#x60;\&quot;&#x60;), and quote (&#x60;&#39;&#x60;).  | [optional] 
 
 ### Return type
 
@@ -332,12 +335,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_preview_subscription**
-> POSTSubscriptionPreviewResponseType p_ost_preview_subscription(body, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> POSTSubscriptionPreviewResponseType p_ost_preview_subscription(request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Preview subscription
 
@@ -353,13 +356,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.Object() # Object | 
+request = zuora_client.POSTSubscriptionPreviewType() # POSTSubscriptionPreviewType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str |  The minor version of the Zuora REST API.   You need to set this parameter if you use the following fields: * targetDate * includeExistingDraftDocItems * previewType   If you have the Invoice Settlement feature enabled, you need to specify this parameter. Otherwise, an error is returned.   See [Zuora REST API Versions](https://www.zuora.com/developer/api-reference/#section/API-Versions) for more information.   (optional)
 
 try:
     # Preview subscription
-    api_response = api_instance.p_ost_preview_subscription(body, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ost_preview_subscription(request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ost_preview_subscription: %s\n" % e)
@@ -369,7 +372,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
+ **request** | [**POSTSubscriptionPreviewType**](POSTSubscriptionPreviewType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**|  The minor version of the Zuora REST API.   You need to set this parameter if you use the following fields: * targetDate * includeExistingDraftDocItems * previewType   If you have the Invoice Settlement feature enabled, you need to specify this parameter. Otherwise, an error is returned.   See [Zuora REST API Versions](https://www.zuora.com/developer/api-reference/#section/API-Versions) for more information.   | [optional] 
 
@@ -384,12 +387,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ost_subscription**
-> POSTSubscriptionResponseType p_ost_subscription(body, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> POSTSubscriptionResponseType p_ost_subscription(request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Create subscription
 
@@ -405,13 +408,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.POSTSubscriptionType() # POSTSubscriptionType | 
+request = zuora_client.POSTSubscriptionType() # POSTSubscriptionType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate  (optional)
 
 try:
     # Create subscription
-    api_response = api_instance.p_ost_subscription(body, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ost_subscription(request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ost_subscription: %s\n" % e)
@@ -421,7 +424,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTSubscriptionType**](POSTSubscriptionType.md)|  | 
+ **request** | [**POSTSubscriptionType**](POSTSubscriptionType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**| The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate  | [optional] 
 
@@ -436,12 +439,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_cancel_subscription**
-> POSTSubscriptionCancellationResponseType p_ut_cancel_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> POSTSubscriptionCancellationResponseType p_ut_cancel_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Cancel subscription
 
@@ -457,14 +460,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.POSTSubscriptionCancellationType() # POSTSubscriptionCancellationType | 
 subscription_key = 'subscription_key_example' # str | Subscription number or ID. Subscription status must be `Active`.
+request = zuora_client.POSTSubscriptionCancellationType() # POSTSubscriptionCancellationType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate   (optional)
 
 try:
     # Cancel subscription
-    api_response = api_instance.p_ut_cancel_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ut_cancel_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ut_cancel_subscription: %s\n" % e)
@@ -474,8 +477,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**POSTSubscriptionCancellationType**](POSTSubscriptionCancellationType.md)|  | 
  **subscription_key** | **str**| Subscription number or ID. Subscription status must be &#x60;Active&#x60;. | 
+ **request** | [**POSTSubscriptionCancellationType**](POSTSubscriptionCancellationType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**| The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate   | [optional] 
 
@@ -490,12 +493,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_renew_subscription**
-> PUTRenewSubscriptionResponseType p_ut_renew_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> PUTRenewSubscriptionResponseType p_ut_renew_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Renew subscription
 
@@ -511,14 +514,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.PUTRenewSubscriptionType() # PUTRenewSubscriptionType | 
 subscription_key = 'subscription_key_example' # str | Subscription number or ID
+request = zuora_client.PUTRenewSubscriptionType() # PUTRenewSubscriptionType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate   (optional)
 
 try:
     # Renew subscription
-    api_response = api_instance.p_ut_renew_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ut_renew_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ut_renew_subscription: %s\n" % e)
@@ -528,8 +531,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTRenewSubscriptionType**](PUTRenewSubscriptionType.md)|  | 
  **subscription_key** | **str**| Subscription number or ID | 
+ **request** | [**PUTRenewSubscriptionType**](PUTRenewSubscriptionType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**| The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate   | [optional] 
 
@@ -544,12 +547,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_resume_subscription**
-> PUTSubscriptionResumeResponseType p_ut_resume_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> PUTSubscriptionResumeResponseType p_ut_resume_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Resume subscription
 
@@ -565,14 +568,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.PUTSubscriptionResumeType() # PUTSubscriptionResumeType | 
 subscription_key = 'subscription_key_example' # str | Subscription number or ID. Subscription status must be Active.
+request = zuora_client.PUTSubscriptionResumeType() # PUTSubscriptionResumeType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate  (optional)
 
 try:
     # Resume subscription
-    api_response = api_instance.p_ut_resume_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ut_resume_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ut_resume_subscription: %s\n" % e)
@@ -582,8 +585,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTSubscriptionResumeType**](PUTSubscriptionResumeType.md)|  | 
  **subscription_key** | **str**| Subscription number or ID. Subscription status must be Active. | 
+ **request** | [**PUTSubscriptionResumeType**](PUTSubscriptionResumeType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**| The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate  | [optional] 
 
@@ -598,12 +601,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_subscription**
-> PUTSubscriptionResponseType p_ut_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> PUTSubscriptionResponseType p_ut_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Update subscription
 
@@ -619,14 +622,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.PUTSubscriptionType() # PUTSubscriptionType | 
 subscription_key = 'subscription_key_example' # str | Subscription number or ID.
+request = zuora_client.PUTSubscriptionType() # PUTSubscriptionType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str |  The minor version of the Zuora REST API.   You need to set this parameter if you use the following fields: * collect * invoice * includeExistingDraftDocItems * previewType * runBilling * targetDate   If you have the Invoice Settlement feature enabled, you need to specify this parameter. Otherwise, an error is returned.   See [Zuora REST API Versions](https://www.zuora.com/developer/api-reference/#section/API-Versions) for more information.  (optional)
 
 try:
     # Update subscription
-    api_response = api_instance.p_ut_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ut_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ut_subscription: %s\n" % e)
@@ -636,8 +639,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTSubscriptionType**](PUTSubscriptionType.md)|  | 
  **subscription_key** | **str**| Subscription number or ID. | 
+ **request** | [**PUTSubscriptionType**](PUTSubscriptionType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**|  The minor version of the Zuora REST API.   You need to set this parameter if you use the following fields: * collect * invoice * includeExistingDraftDocItems * previewType * runBilling * targetDate   If you have the Invoice Settlement feature enabled, you need to specify this parameter. Otherwise, an error is returned.   See [Zuora REST API Versions](https://www.zuora.com/developer/api-reference/#section/API-Versions) for more information.  | [optional] 
 
@@ -652,12 +655,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **p_ut_suspend_subscription**
-> PUTSubscriptionSuspendResponseType p_ut_suspend_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+> PUTSubscriptionSuspendResponseType p_ut_suspend_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
 
 Suspend subscription
 
@@ -673,14 +676,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = zuora_client.SubscriptionsApi()
-body = zuora_client.PUTSubscriptionSuspendType() # PUTSubscriptionSuspendType | 
 subscription_key = 'subscription_key_example' # str | Subscription number or ID. Subscription status must be Active.
+request = zuora_client.PUTSubscriptionSuspendType() # PUTSubscriptionSuspendType | 
 zuora_entity_ids = 'zuora_entity_ids_example' # str | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  (optional)
 zuora_version = 'zuora_version_example' # str | The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate  (optional)
 
 try:
     # Suspend subscription
-    api_response = api_instance.p_ut_suspend_subscription(body, subscription_key, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
+    api_response = api_instance.p_ut_suspend_subscription(subscription_key, request, zuora_entity_ids=zuora_entity_ids, zuora_version=zuora_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->p_ut_suspend_subscription: %s\n" % e)
@@ -690,8 +693,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PUTSubscriptionSuspendType**](PUTSubscriptionSuspendType.md)|  | 
  **subscription_key** | **str**| Subscription number or ID. Subscription status must be Active. | 
+ **request** | [**PUTSubscriptionSuspendType**](PUTSubscriptionSuspendType.md)|  | 
  **zuora_entity_ids** | **str**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **zuora_version** | **str**| The minor version of the Zuora REST API.   You only need to set this parameter if you use the following fields: * invoice * collect * runBilling * targetDate  | [optional] 
 
@@ -706,7 +709,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8, application/json
+ - **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

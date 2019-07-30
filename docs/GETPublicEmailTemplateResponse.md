@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **created_by** | **str** | The ID of the user who created the notification definition. | [optional] 
 **created_on** | **datetime** | The time when the notification definition was created. Specified in the UTC timezone in the ISO860 format (YYYY-MM-DDThh:mm:ss.sTZD). E.g. 1997-07-16T19:20:30.45+00:00 | [optional] 
 **description** | **str** | The description of the email template. | [optional] 
-**email_body** | **str** | The email body. You can add merge fields in the email object using angle brackets.  User can also embed html tags if &#x27;isHtml&#x27; is true. | [optional] 
+**email_body** | **str** | The email body. You can add merge fields in the email object using angle brackets.  User can also embed html tags if &#39;isHtml&#39; is true. | [optional] 
 **email_subject** | **str** | The email subject. You can add merge fields in the email subject using angle brackets. | [optional] 
 **encoding_type** | **str** | The endcode type of the email body. | [optional] 
 **event_type_name** | **str** | The name of the event type. | [optional] 
@@ -29,4 +29,5 @@ Name | Type | Description | Notes
 **updated_on** | **datetime** | The time when the notification definition was updated. Specified in the UTC timezone in the ISO860 format (YYYY-MM-DDThh:mm:ss.sTZD). E.g. 1997-07-16T19:20:30.45+00:00 | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_by_id** | **str** | The ID of the Zuora user who created the ProductRatePlanChargeTier object. **Character limit**: 32 **Values**: automatically generated  | [optional] 
 **created_date** | **datetime** | The date when the ProductRatePlanChargeTier object was created. **Character limit**: 29 **Values**: automatically generated  | [optional] 
-**currency** | **str** | The code corresponding to the currency for the tier&#x27;s price. **Character limit**: 3 **Values**: a valid currency code  | [optional] 
+**currency** | **str** | The code corresponding to the currency for the tier&#39;s price. **Character limit**: 3 **Values**: a valid currency code  | [optional] 
 **ending_unit** | **float** | The end number of a range of units for the tier. **Character limit**: 16 **Values**: any positive decimal value  | [optional] 
 **id** | **str** | Object identifier. | [optional] 
 **price** | **float** |  The price of the tier if the charge is a flat fee, or the price of each unit in the tier if the charge model is tiered pricing. **Character limit**: 16 **Values**: a valid currency value  | [optional] 
@@ -16,4 +16,5 @@ Name | Type | Description | Notes
 **updated_date** | **datetime** |  The date when the product rate plan charge tier was last updated. **Character limit**: 29 **Values**: automatically generated  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
